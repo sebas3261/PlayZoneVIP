@@ -100,10 +100,17 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/fiestas-infantiles" className={itemHover}>
+                    Fiestas infantiles
+                  </Link>
+                </li>
+                <li>
                   <Link href="/padel" className={itemHover}>
                     Pádel
                   </Link>
                 </li>
+              </ul>
+              <ul className="flex flex-col gap-1">
                 <li>
                   <Link href="/paintball" className={itemHover}>
                     Paintball
@@ -119,33 +126,9 @@ export default function Footer() {
                     Fútbol
                   </Link>
                 </li>
-              </ul>
-              <ul className="flex flex-col gap-1">
-                <li>
-                  <Link href="/fiestas-infantiles" className={itemHover}>
-                    Fiestas infantiles
-                  </Link>
-                </li>
-
                 <li>
                   <Link href="/contacto" className={itemHover}>
                     Contacto
-                  </Link>
-                </li>
-                {/* opcionales para SEO interno */}
-                <li>
-                  <Link href="/sitemap.xml" className={itemHover}>
-                    Sitemap
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/politica-privacidad" className={itemHover}>
-                    Política de privacidad
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/aviso-legal" className={itemHover}>
-                    Aviso legal
                   </Link>
                 </li>
               </ul>
@@ -190,6 +173,33 @@ export default function Footer() {
             </ul>
           </address>
         </div>
+      </div>
+      <div className="mt-5 flex justify-between flex-col md:flex-row">
+        <div>
+          <p>© 2025 - Play Zone VIP</p>
+        </div>
+        <ul className="flex flex-col gap-1 mt-2 sm:flex-row sm:gap-4 md:mt-0">
+          <li>
+            <Link href="/cookies" className={itemHover}>
+              Cookies
+            </Link>
+          </li>
+          <li>
+            <Link href="/sitemap.xml" className={itemHover}>
+              Sitemap
+            </Link>
+          </li>
+          <li>
+            <Link href="/politica-privacidad" className={itemHover}>
+              Política de privacidad
+            </Link>
+          </li>
+          <li>
+            <Link href="/aviso-legal" className={itemHover}>
+              Aviso legal
+            </Link>
+          </li>
+        </ul>
       </div>
     </footer>
   );

@@ -38,7 +38,8 @@ export default function index() {
       </a>
 
       <div className="font-text font-bold flex justify-between p-[30px] py-[15px] items-center ">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-5">
+          <img src="/LogoNoBackground.webp" className="w-10"/>
           <h1 className="font-title text-base">PLAYZONE VIP</h1>
         </Link>
 

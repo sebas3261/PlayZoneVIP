@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
@@ -18,6 +18,11 @@ export const sprintura = localFont({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://playzonevip.com"),
   title: {
@@ -36,10 +41,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
   },
   openGraph: {
     type: "website",
