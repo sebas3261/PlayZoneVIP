@@ -1,5 +1,6 @@
 "use client";
 
+import HomeBoxes from "@/components/HomeBoxes";
 import Title from "@/components/Title";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
@@ -9,7 +10,8 @@ export default function Home() {
 
   const handleWhatsApp = () => {
     const phone = "573132485526";
-    const message = "Hola, quiero saber más sobre las actividades de Playzone VIP";
+    const message =
+      "Hola, quiero saber más sobre las actividades de Playzone VIP";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
@@ -55,7 +57,42 @@ export default function Home() {
       </section>
 
       <section className="bg-white">
-        <Title titulo="Nuestras Actividades" subTitulo="Cuatro formas de vivir la adrenalina" descripcion="Vive la emoción del deporte como nunca antes. Cada experiencia en PlayZone VIP está diseñada para despertar tu espíritu competitivo y hacerte sentir la adrenalina del juego."/>
+        <Title
+          titulo="Nuestras Actividades"
+          subTitulo="Cuatro formas de vivir la adrenalina"
+          descripcion="Vive la emoción del deporte como nunca antes. Cada experiencia en PlayZone VIP está diseñada para despertar tu espíritu competitivo y hacerte sentir la adrenalina del juego."
+        />
+      </section>
+
+      <section className="bg-white flex flex-wrap justify-center gap-10 pb-10 px-5">
+        <HomeBoxes
+          image="/futbolHome.webp"
+          activity="Fútbol"
+          description="Canchas profesionales de césped sintético de última generación, iluminación LED"
+        />
+        <HomeBoxes
+          image="/padelHome.webp"
+          activity="Pádel"
+          description="Disfruta de modernas canchas de pádel techadas y con iluminación de torneo."
+        />
+        <HomeBoxes
+          image="/paintballHome.webp"
+          activity="Paintball"
+          description="Campos de batalla con escenarios únicos, equipamiento de protección completo y bolas de pintura."
+        />
+        <HomeBoxes
+          image="/escapeHome.webp"
+          activity="Escape Room"
+          description="Salas inmersivas con tecnología de última generación, acertijos desafiantes y aventuras que pondrán a prueba tu ingenio."
+        />
+      </section>
+
+      <section className="bg-white">
+        <Title 
+          titulo="Por que elegirnos"
+          subTitulo="La mejor experiencia deportiva"
+          descripcion="En PlayZone VIP nos dedicamos a ofrecer instalaciones de primera calidad y un servicio excepcional para que disfrutes al máximo de tu tiempo deportivo y de ocio."  
+        />
       </section>
     </main>
   );
