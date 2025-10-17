@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   const itemHover =
-    "inline-block transition-all duration-300 hover:scale-110 hover:text-[#F35723] hover:drop-shadow-[0_0_6px_rgba(255,209,102,0.7)]";
+    "inline-block transition-all duration-300 hover:scale-110 hover:text-[#F35723] hover:drop-shadow-[0_0_6px_rgba(255,209,102,0.7)] text-sm md:text-base";
 
   return (
     <footer
@@ -15,7 +15,7 @@ export default function Footer() {
         <div>
           {/* Evita H1/uso excesivo de headings en footer; H2 aquí está bien */}
           <h2 className="font-title text-2xl mb-1">PLAYZONE VIP</h2>
-          <p className="max-w-[48ch] mb-6">
+          <p className="max-w-[48ch] mb-6 text-sm md:text-base">
             Tu centro de entretenimiento deportivo donde la diversión no tiene
             límites. Fútbol, Pádel, Paintball y Escape Room en un solo lugar.
           </p>
@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8 sm:flex-row sm:gap-12">
           <nav aria-label="Enlaces rápidos">
             <h3 className="font-semibold mb-2">Enlaces rápidos</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-10">
               <ul className="flex flex-col gap-1">
                 <li>
                   <Link href="/" className={itemHover}>

@@ -79,8 +79,8 @@ export default function Home() {
               onClick={handleWhatsApp}
               type="button"
             >
+              <Icon icon="mdi:calendar-outline" />
               Reservar ahora
-              <Icon icon="line-md:arrow-right" />
             </button>
             <button
               className="bg-white p-2 rounded-md font-text font-semibold text-xs flex items-center gap-1 cursor-pointer"
@@ -89,8 +89,8 @@ export default function Home() {
               }}
               type="button"
             >
+              <Icon icon="solar:widget-6-linear" />
               Ver actividades
-              <Icon icon="line-md:play-filled" />
             </button>
           </div>
         </div>
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white font-text flex flex-col lg:flex-row-reverse lg:p-10">
+      <section className="bg-white font-text flex flex-col items-center lg:flex-row-reverse lg:p-10 pb-5">
         <img
           src="/nosotros.webp"
           className="lg:w-[638px] lg:h-[422px] lg:rounded-xl"
@@ -195,7 +195,9 @@ export default function Home() {
           <div className="bg-[#E9EBEF] px-5 py-1 rounded-full">
             <h3 className="font-title text-sm">Sobre nosotros</h3>
           </div>
-          <h3 className="font-semibold text-center lg:text-start">Más de 10 años creando momentos inolvidables</h3>
+          <h3 className="font-semibold text-center lg:text-start">
+            Más de 10 años creando momentos inolvidables
+          </h3>
           <p className="text-center text-[#828292] text-xs md:text-sm lg:text-start">
             PlayZone nació con la visión de crear un espacio donde el deporte,
             la diversión y la familia se unieran en perfecta armonía. Durante
@@ -218,10 +220,76 @@ export default function Home() {
               <p className="text-[#828292] text-xs">Actividades Principales</p>
             </div>
           </div>
-          <button className=" text-white rounded-sm py-2 px-5 text-sm cursor-pointer font-semibold bg-gradient-to-br from-[#713478] to-[#b76cbf] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)] hover:brightness-110 active:translate-y-[1px] transition-all duration-300 flex items-center gap-2" onClick={()=>{router.push("/actividades")}}>
+          <button
+            className=" text-white rounded-sm py-2 px-5 text-sm cursor-pointer font-semibold bg-gradient-to-br from-[#713478] to-[#b76cbf] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)] hover:brightness-110 active:translate-y-[1px] transition-all duration-300 flex items-center gap-2"
+            onClick={() => {
+              router.push("/actividades");
+            }}
+            type="button"
+          >
+            <Icon icon="solar:widget-6-linear" className="w-5 h-5" />
             Conoce nuestras actividades
-            <Icon icon="solar:arrow-right-linear" className="w-[20px] h-[20px]"/>
           </button>
+        </div>
+      </section>
+
+      <section className="bg-white pb-15 md:px-10 lg:px-40">
+        <div className="bg-[#713478] text-white p-7 font-text flex flex-col gap-5 md:items-center md:justify-center md:rounded-lg lg:rounded-3xl">
+          <h3 className="text-center font-semibold mb-2">
+            ¿Listo para vivir la experiencia PlayZone?
+          </h3>
+          <p className="text-center text-xs font-semibold mb-2 md:max-w-[728px]">
+            Ya sea para un partido con amigos, una celebración especial o
+            simplemente para pasar un buen rato, estamos aquí para hacer
+            realidad tu plan perfecto.
+          </p>
+          <ul className="flex flex-col gap-2 text-xs md:flex-row md:gap-20">
+            <li className="flex items-center gap-2">
+              <Icon
+                icon="ic:baseline-phone"
+                className="w-5 h-5"
+                aria-hidden="true"
+              />
+              <a href="tel:+573132485526">+57 313 248 5526</a>
+            </li>
+            <li className="flex items-center gap-2 ">
+              <Icon
+                icon="mdi:location"
+                className="w-5 h-5 mt-0.5"
+                aria-hidden="true"
+              />
+              <a
+                href="https://maps.google.com/?q=PlayZone+VIP+Ch%C3%ADa+Cra+9+Vereda+Bojac%C3%A1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs"
+              >
+                Cra. 9 Vereda Bojacá / Km 1 vía Chía-Cajicá
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Icon
+                icon="mdi:clock-outline"
+                className="w-5 h-5"
+                aria-hidden="true"
+              />
+              <span>L–D 8:00–23:00</span>
+            </li>
+          </ul>
+          <div className="flex gap-10">
+            <button className="bg-white text-black font-semibold flex items-center gap-1 p-2 rounded-md w-[162px] text-sm justify-center cursor-pointer"
+            type="button">
+              <Icon icon="mdi:calendar-outline" />
+              Reservar ahora
+            </button>
+            <button
+              className="bg-white text-black font-semibold p-2 rounded-md w-[162px] text-sm cursor-pointer"
+              onClick={handleWhatsApp}
+              type="button"
+            >
+              Mas informacion
+            </button>
+          </div>
         </div>
       </section>
     </main>

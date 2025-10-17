@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -26,9 +27,9 @@ export default function index({ image, activity, description, link }: props) {
 
       <div className="flex flex-col justify-between flex-1 py-3 px-2">
         <p className="text-sm text-[#828292]">{description}</p>
-        <button className="mt-auto text-white rounded-3xl py-2 px-5 text-sm mx-3 cursor-pointer font-semibold bg-gradient-to-br from-[#713478] to-[#b76cbf] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)] hover:brightness-110 active:translate-y-[1px] transition-all duration-300 " onClick={()=>{router.push(link)}}>
+        <Link className="mt-auto text-white rounded-3xl py-2 px-5 text-sm mx-3 cursor-pointer font-semibold bg-gradient-to-br from-[#713478] to-[#b76cbf] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)] hover:brightness-110 active:translate-y-[1px] transition-all duration-300 flex items-center justify-center" href={link} type="button">
           Ver más
-        </button>
+        </Link>
       </div>
     </div>
   );
