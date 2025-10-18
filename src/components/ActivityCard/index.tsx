@@ -35,7 +35,7 @@ export default function Card({
       "
     >
       {/* Imagen (sin hover transform) */}
-      <div className="w-full aspect-[566/290] md:aspect-auto md:h-[290px]">
+      <div className="w-full aspect-[566/290] h-[240px] md:aspect-auto md:h-[290px]">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
 
@@ -65,7 +65,7 @@ export default function Card({
             href={link}
             className="
               w-full flex items-center justify-center gap-2 py-3
-              text-white rounded-3xl text-sm md:text-base font-semibold
+              text-white rounded-xl text-sm md:text-base font-semibold
               bg-gradient-to-br from-[#713478] to-[#b76cbf]
               shadow-[0_4px_10px_rgba(0,0,0,0.3)]
               hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)]
@@ -99,7 +99,7 @@ export default function Card({
             }}
             className="
               group w-full relative overflow-hidden
-              rounded-3xl text-sm md:text-base font-semibold
+              rounded-xl text-sm md:text-base font-semibold
               border-2 border-[#b76cbf] text-[#713478]
               flex items-center justify-center gap-2 py-3
               transition-all duration-300
