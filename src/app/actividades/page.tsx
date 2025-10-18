@@ -35,7 +35,7 @@ export default function Page() {
   "
       >
         <ActivityCard
-          image="/futbolcard.webp"
+          image="/futbolCard.webp"
           title="Canchas sinteticas"
           subTitle="Es hora de vivir la adrenalina con tus amigos"
           time="1h"
@@ -43,7 +43,7 @@ export default function Page() {
           link = "canchas"
         />
         <ActivityCard
-          image="/padelcard.webp"
+          image="/padelCard.webp"
           title="Padel"
           subTitle="¡Que empiece el juego! Tenemos todo listo para que mejores tus habilidades,"
           time="1h 30m"
@@ -51,7 +51,7 @@ export default function Page() {
           link="padel"
         />
         <ActivityCard
-          image="/paintballcard.webp"
+          image="/paintballCard.webp"
           title="Paintball"
           subTitle="¡Reúne a tu equipo, carga tu marcadora y prepárate para la batalla!"
           time="1h"
@@ -59,7 +59,7 @@ export default function Page() {
           link="paintball"
         />
         <ActivityCard
-          image="/escapecard.webp"
+          image="/escapeCard.webp"
           title="Escape room"
           subTitle="Afinen su lógica y prepárense para un reto lleno de adrenalina."
           time="1h"
