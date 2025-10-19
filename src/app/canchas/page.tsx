@@ -68,19 +68,19 @@ export default function Page() {
           alt="Nuestras canchas"
           width={800}
           height={600}
-          className="w-full h-[200px] object-cover object-center mb-5 md:h-[353px] md:max-w-[580px] md:rounded-xl md:shadow-[0_4px_10px_3px_rgba(0,0,0,0.3)]"
+          className="w-full h-[200px] object-cover object-center mb-10 md:h-[353px] md:max-w-[580px] md:rounded-xl md:shadow-[0_4px_10px_3px_rgba(0,0,0,0.3)]"
         />
         <div className="px-8 md:px-0">
-          <h3 className="font-title md:text-2xl md:mb-1">Nuestras canchas</h3>
-          <p className="text-xs mb-5 text-[#828292] md:text-sm lg:text-base md:mb-10">
+          <h3 className="font-title md:text-2xl mb-1">Nuestras canchas</h3>
+          <p className="text-sm mb-5 text-[#828292] md:text-sm lg:text-base md:mb-10">
             Cancha profesional de césped sintético de última generación,
             perfecta para partidos competitivos y entrenamientos de cualquier
             nivel. Equipamiento completo y mantenimiento diario.
           </p>
-          <h3 className="font-title md:text-2xl md:mb-1">
-            Características incluidas:
+          <h3 className="font-title md:text-2xl mb-1">
+            Caracteristicas incluidas:
           </h3>
-          <ul className="text-xs list-disc pl-5 text-[#828292] md:text-sm lg:text-base">
+          <ul className="text-sm list-disc pl-5 text-[#828292] md:text-sm lg:text-base">
             <li>Totalmente cerradas con malla</li>
             <li>Iluminación profesional</li>
             <li>Zona de graderías</li>
