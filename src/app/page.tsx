@@ -62,7 +62,7 @@ export default function Home() {
       <section className="relative h-[550px] md:h-[654px] flex items-center">
         {/* Fondo optimizado con Next/Image */}
         <Image
-          src="/MainHome.webp"
+          src="/images/Home/Hero/MainHome.webp"
           alt="Playzone VIP - Deportes y Aventuras en Chía"
           fill
           priority // Hero: se carga primero
@@ -114,25 +114,25 @@ export default function Home() {
 
       <section className="bg-white flex flex-wrap justify-center gap-10 px-5">
         <HomeBoxes
-          image="/futbolHome.webp"
+          image="/images/Home/ActivityCards/futbolHome.webp"
           activity="Fútbol"
           description="Canchas profesionales de césped sintético de última generación, iluminación LED"
           link="/canchas"
         />
         <HomeBoxes
-          image="/padelHome.webp"
+          image="/images/Home/ActivityCards/padelHome.webp"
           activity="Pádel"
           description="Disfruta de modernas canchas de pádel techadas y con iluminación de torneo."
           link="/padel"
         />
         <HomeBoxes
-          image="/paintballHome.webp"
+          image="/images/Home/ActivityCards/paintballHome.webp"
           activity="Paintball"
           description="Campos de batalla con escenarios únicos, equipamiento de protección completo y bolas de pintura."
           link="/paintball"
         />
         <HomeBoxes
-          image="/escapeHome.webp"
+          image="/images/Home/ActivityCards/escapeHome.webp"
           activity="Escape Room"
           description="Salas inmersivas con tecnología de última generación, acertijos desafiantes y aventuras que pondrán a prueba tu ingenio."
           link="/escaperoom-game"
@@ -196,7 +196,7 @@ export default function Home() {
 
       <section className="bg-white font-text flex flex-col items-center lg:flex-row-reverse lg:p-10 pb-5">
         <Image
-          src="/nosotros.webp"
+          src="/images/Home/Nosotros/nosotros.webp"
           alt="Nosotros en Playzone VIP"
           width={638}
           height={422}

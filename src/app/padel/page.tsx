@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Pádel",
@@ -32,14 +33,31 @@ export const metadata: Metadata = {
       },
     ],
   },
-
 };
-
 
 export default function page() {
   return (
-    <div>
+    <main className="bg-white font-text">
+      <section>
+        <Image
+          src="/images/Padel/padelHeader.webp"
+          alt="Canchas header"
+          width={800}
+          height={600}
+          className="w-full h-[300px] object-cover object-center mb-10 md:h-[400px]"
+        />
+      </section>
       
-    </div>
-  )
+      <section className="flex flex-col justify-center items-center gap-2 mb-10">
+          <h2 className="font-title text-3xl text-center">
+            Padel
+          </h2>
+          <h3 className="text-center text-[#828292] text-sm font-[600]">
+            El deporte que más crece, en las mejores pistas
+            <br />
+            DOMINGO A DOMINGO DE 8am - 11 pm
+          </h3>
+      </section>
+    </main>
+  );
 }

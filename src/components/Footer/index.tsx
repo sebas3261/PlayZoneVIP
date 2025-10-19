@@ -100,30 +100,30 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/fiestas-infantiles" className={itemHover}>
+                  <Link href="/fiestasinfantiles" className={itemHover}>
                     Fiestas infantiles
                   </Link>
                 </li>
+                <li>
+                  <Link href="/canchas" className={itemHover}>
+                    Fútbol
+                  </Link>
+                </li>
+              </ul>
+              <ul className="flex flex-col gap-1">
                 <li>
                   <Link href="/padel" className={itemHover}>
                     Pádel
                   </Link>
                 </li>
-              </ul>
-              <ul className="flex flex-col gap-1">
                 <li>
                   <Link href="/paintball" className={itemHover}>
                     Paintball
                   </Link>
                 </li>
                 <li>
-                  <Link href="/escape-room" className={itemHover}>
+                  <Link href="/escaperoom-game" className={itemHover}>
                     Escape Room
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/canchas" className={itemHover}>
-                    Fútbol
                   </Link>
                 </li>
                 <li>

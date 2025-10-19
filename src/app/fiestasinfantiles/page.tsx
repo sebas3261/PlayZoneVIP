@@ -14,6 +14,25 @@ export const metadata: Metadata = {
     "eventos familiares",
     "Playzone VIP",
   ],
+
+  // 🔗 Open Graph
+  openGraph: {
+    title: "Fiestas Infantiles | Playzone VIP",
+    description:
+      "Organiza la mejor fiesta infantil en Playzone VIP: espacios seguros, actividades únicas y diversión garantizada para grandes y pequeños.",
+    url: "https://playzonevip.com/fiestas-infantiles",
+    siteName: "Playzone VIP",
+    type: "website",
+    locale: "es_CO",
+    images: [
+      {
+        url: "/og-fiestas-infantiles.webp", // guarda esta imagen en /public
+        width: 1200,
+        height: 630,
+        alt: "Fiestas Infantiles en Playzone VIP",
+      },
+    ],
+  },
 };
 
 export default function Page() {
@@ -28,7 +47,7 @@ export default function Page() {
 
       <section className="flex flex-wrap justify-center gap-20 px-10 pb-10">
         <PartyCard
-          image="/paintboleroFiesta.webp"
+          image="/images/Fiestas/paintboleroFiesta.webp"
           title="PAINT FUTBOLERO"
           subTitle="10 personas · 2h de fútbol"
           people="10 personas"
@@ -62,7 +81,7 @@ export default function Page() {
         />
 
         <PartyCard
-          image="/escapeFiesta.webp"
+          image="/images/Fiestas/escapeFiesta.webp"
           title="ESCAPEROOM"
           subTitle="12 personas · 1h"
           people="12 personas"
@@ -82,7 +101,7 @@ export default function Page() {
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Escape%20Room"
         />
         <PartyCard
-          image="/paintFiesta.webp"
+          image="/images/Fiestas/paintFiesta.webp"
           title="PAINTBOLERO"
           subTitle="12 personas · 1h"
           people="12 personas"
@@ -115,7 +134,7 @@ export default function Page() {
 
         {/* JUEGOS PLAYZONE */}
         <PartyCard
-          image="/juegosFiesta.webp"
+          image="/images/Fiestas/juegosFiesta.webp"
           title="JUEGOS PLAYZONE"
           subTitle="12 personas · 3h"
           people="12 personas"
@@ -146,7 +165,7 @@ export default function Page() {
 
         {/* FUTBOLERO */}
         <PartyCard
-          image="/futboleroFiesta.webp"
+          image="/images/Fiestas/futboleroFiesta.webp"
           title="FUTBOLERO"
           subTitle="10 personas · 3h"
           people="10 personas"
