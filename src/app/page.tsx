@@ -118,10 +118,13 @@ export default function Home() {
     bg-white
     flex
     gap-10
-    overflow-x-auto             /* scroll horizontal */
-    snap-x snap-mandatory       /* activa el snapping horizontal */
-    scroll-smooth               /* suaviza el scroll */
+    overflow-x-auto             /* scroll horizontal solo en móvil */
+    snap-x snap-mandatory
+    scroll-smooth
     px-5 py-10
+    justify-start               /* por defecto: empieza alineado */
+    md:justify-center           /* en pantallas medianas o mayores: centra */
+    md:overflow-x-visible       /* quita scroll cuando hay espacio suficiente */
   "
       >
         <div className="snap-center shrink-0">
@@ -235,7 +238,7 @@ export default function Home() {
           <p className="text-center text-[#828292] text-xs md:text-sm lg:text-start">
             PlayZone nació con la visión de crear un espacio donde el deporte,
             la diversión y la familia se unieran en perfecta armonía. Durante
-            más de una década, hemos sido el hogar de miles de deportistas,
+            más de una década hemos sido el hogar de miles de deportistas,
             familias y celebraciones especiales.
           </p>
           <p className="text-center text-[#828292] text-xs md:text-sm lg:text-start">
