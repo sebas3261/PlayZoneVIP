@@ -185,11 +185,6 @@ export default function Footer() {
             </Link>
           </li>
           <li>
-            <Link href="/sitemap.xml" className={itemHover}>
-              Sitemap
-            </Link>
-          </li>
-          <li>
             <Link href="/politica-privacidad" className={itemHover}>
               Política de privacidad
             </Link>

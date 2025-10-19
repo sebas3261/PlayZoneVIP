@@ -67,8 +67,6 @@ export default function PartyCard({
           </span>
         </div>
 
-        <p className="text-gray-700 text-base md:text-lg mb-3">{subTitle}</p>
-
         {/* Info rápida */}
         <div className="flex justify-between items-center text-base md:text-lg text-gray-700 mb-4">
           <span className="flex items-center gap-2">

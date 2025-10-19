@@ -1,7 +1,0 @@
-# robots.txt - Playzone VIP
-
-User-agent: *
-Disallow: /
-
-# Indica la ubicación del mapa del sitio
-Sitemap: https://playzonevip.com/sitemap.xml
