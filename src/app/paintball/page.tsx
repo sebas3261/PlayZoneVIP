@@ -53,7 +53,7 @@ export default function page() {
         <h3 className="text-center text-[#828292] text-sm font-[600]">
           Vive la emoción del paintball en nuestros campos. Estrategia, trabajo en equipo y mucha diversión en una experiencia segura y profesional.
           <br />
-          DOMINGO A DOMINGO DE 8am - 11 pm
+          DOMINGO A DOMINGO DE 8 AM - 11 PM
         </h3>
       </section>
     </main>

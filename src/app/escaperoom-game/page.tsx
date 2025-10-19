@@ -58,7 +58,7 @@ export default function page() {
           Reúne a tu equipo, afinen su lógica y prepárense para un reto lleno de
           adrenalina. ¡Reserva ahora y demuestra que pueden salir a tiempo!
           <br />
-          DOMINGO A DOMINGO DE 2pm - 11 pm
+          DOMINGO A DOMINGO DE 2 PM - 11 PM
         </h3>
       </section>
 
@@ -69,6 +69,7 @@ export default function page() {
           subTitle={"Jigsaw ha atrapado a tu grupo de amigos y los tiene encerrados en una habitación aterradora.\nTienen 60 minutos para descifrar sus macabros acertijos, usar cada recurso disponible y trabajar en equipo para escapar con vida. ¿Lograrán salir antes de que sea demasiado tarde? "}
           people="4"
           time="1h"
+          link="https://wa.me/573132485526?text=Hola,%20quiero%20más%20información%20sobre%20el%20scape%20de%20saw"
         />
         <EscapeCard
           image="/images/Escape/escapeHeader.webp"
@@ -76,6 +77,7 @@ export default function page() {
           subTitle={"¡El famoso millonario ha sido asesinado en su propia mansión!\nAhora, tienes 60 minutos para descubrir quién cometió el crimen, con qué arma y en qué lugar sucedió. Explora la escena, sigue las pistas, resuelve los acertijos y reúne todas las pruebas.\nSolo los mejores detectives podrán armar el caso y hacer su declaración final antes de que el tiempo se agote.\n¿Estás listo para encontrar al asesino? "}
           people="4"
           time="1h"
+          link="https://wa.me/573132485526?text=Hola,%20quiero%20más%20información%20sobre%20el%20scape%20de%20en%20busqueda%20del%20asesino"
         />
       </section>
 

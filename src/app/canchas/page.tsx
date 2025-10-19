@@ -57,7 +57,7 @@ export default function Page() {
         <h3 className="text-center text-[#828292] text-sm font-[600]">
           Es hora de vivir la adrenalina con tus amigos.
           <br />
-          DOMINGO A DOMINGO DE 8am - 11 pm
+          DOMINGO A DOMINGO DE 8 AM - 11 PM
         </h3>
       </section>
 
@@ -219,7 +219,7 @@ export default function Page() {
               </li>
               <li className="flex gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
-                <span>Disponibilidad desde las 08:00</span>
+                <span>Disponibilidad desde las 08:00 AM</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>

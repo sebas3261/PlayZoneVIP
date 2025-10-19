@@ -55,7 +55,7 @@ export default function page() {
           <h3 className="text-center text-[#828292] text-sm font-[600]">
             El deporte que más crece, en las mejores pistas
             <br />
-            DOMINGO A DOMINGO DE 8am - 11 pm
+            DOMINGO A DOMINGO DE 8 AM - 11 PM
           </h3>
       </section>
     </main>
