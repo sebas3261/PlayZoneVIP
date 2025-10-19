@@ -51,31 +51,33 @@ export default function page() {
       </section>
 
       <section className="flex flex-col justify-center items-center gap-2 mb-10">
+        <div className="px-5">
         <h2 className="font-title text-3xl text-center">Escape room</h2>
         <h3 className="text-center text-[#828292] text-sm font-[600]">
-          ¡Atrévete a Entrar a nuestras salas de escape!
+          ¡Atrévete a entrar a nuestras salas de escape!
           <br />
-          Reúne a tu equipo, afinen su lógica y prepárense para un reto lleno de
+          Reúne a tu equipo, afina tu lógica y prepárrate para un reto lleno de
           adrenalina. ¡Reserva ahora y demuestra que pueden salir a tiempo!
           <br />
           DOMINGO A DOMINGO DE 2 PM - 11 PM
         </h3>
+        </div>
       </section>
 
       <section className="flex flex-wrap justify-center gap-10 px-8">
         <EscapeCard
-          image="/images/Escape/escapeHeader.webp"
+          image="/images/Escape/escapeSaw.webp"
           title="SAW"
           subTitle={"Jigsaw ha atrapado a tu grupo de amigos y los tiene encerrados en una habitación aterradora.\nTienen 60 minutos para descifrar sus macabros acertijos, usar cada recurso disponible y trabajar en equipo para escapar con vida. ¿Lograrán salir antes de que sea demasiado tarde? "}
-          people="4"
+          people="2 - 6"
           time="1h"
           link="https://wa.me/573132485526?text=Hola,%20quiero%20más%20información%20sobre%20el%20scape%20de%20saw"
         />
         <EscapeCard
-          image="/images/Escape/escapeHeader.webp"
+          image="/images/Escape/escapeAsesino.webp"
           title="¡En Busca del Asesino!"
-          subTitle={"¡El famoso millonario ha sido asesinado en su propia mansión!\nAhora, tienes 60 minutos para descubrir quién cometió el crimen, con qué arma y en qué lugar sucedió. Explora la escena, sigue las pistas, resuelve los acertijos y reúne todas las pruebas.\nSolo los mejores detectives podrán armar el caso y hacer su declaración final antes de que el tiempo se agote.\n¿Estás listo para encontrar al asesino? "}
-          people="4"
+          subTitle={"¡El famoso millonario ha sido asesinado en su propia mansión!\nAhora tienes 60 minutos para descubrir quién cometió el crimen, con qué arma y en qué lugar sucedió. Explora la escena, sigue las pistas, resuelve los acertijos y reúne todas las pruebas.\nSolo los mejores detectives podrán armar el caso y hacer su declaración final antes de que el tiempo se agote.\n¿Estás listo para encontrar al asesino? "}
+          people="2 - 6"
           time="1h"
           link="https://wa.me/573132485526?text=Hola,%20quiero%20más%20información%20sobre%20el%20scape%20de%20en%20busqueda%20del%20asesino"
         />

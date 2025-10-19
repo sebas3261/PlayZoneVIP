@@ -112,31 +112,53 @@ export default function Home() {
         />
       </section>
 
-      <section className="bg-white flex flex-wrap justify-center gap-10 px-5">
-        <HomeBoxes
-          image="/images/Home/ActivityCards/futbolHome.webp"
-          activity="Fútbol"
-          description="Canchas profesionales de césped sintético de última generación, iluminación LED"
-          link="/canchas"
-        />
-        <HomeBoxes
-          image="/images/Home/ActivityCards/padelHome.webp"
-          activity="Pádel"
-          description="Disfruta de modernas canchas de pádel techadas y con iluminación de torneo."
-          link="/padel"
-        />
-        <HomeBoxes
-          image="/images/Home/ActivityCards/paintballHome.webp"
-          activity="Paintball"
-          description="Campos de batalla con escenarios únicos, equipamiento de protección completo y bolas de pintura."
-          link="/paintball"
-        />
-        <HomeBoxes
-          image="/images/Home/ActivityCards/escapeHome.webp"
-          activity="Escape Room"
-          description="Salas inmersivas con tecnología de última generación, acertijos desafiantes y aventuras que pondrán a prueba tu ingenio."
-          link="/escaperoom-game"
-        />
+      <section
+        className="
+    scroll-hide
+    bg-white
+    flex
+    gap-10
+    overflow-x-auto             /* scroll horizontal */
+    snap-x snap-mandatory       /* activa el snapping horizontal */
+    scroll-smooth               /* suaviza el scroll */
+    px-5 py-10
+  "
+      >
+        <div className="snap-center shrink-0">
+          <HomeBoxes
+            image="/images/Home/ActivityCards/futbolHome.webp"
+            activity="Fútbol"
+            description="Canchas profesionales de césped sintético de última generación, iluminación LED"
+            link="/canchas"
+          />
+        </div>
+
+        <div className="snap-center shrink-0">
+          <HomeBoxes
+            image="/images/Home/ActivityCards/padelHome.webp"
+            activity="Pádel"
+            description="Disfruta de modernas canchas de pádel techadas y con iluminación de torneo."
+            link="/padel"
+          />
+        </div>
+
+        <div className="snap-center shrink-0">
+          <HomeBoxes
+            image="/images/Home/ActivityCards/paintballHome.webp"
+            activity="Paintball"
+            description="Campos de batalla con escenarios únicos, equipamiento de protección completo y bolas de pintura."
+            link="/paintball"
+          />
+        </div>
+
+        <div className="snap-center shrink-0">
+          <HomeBoxes
+            image="/images/Home/ActivityCards/escapeHome.webp"
+            activity="Escape Room"
+            description="Salas inmersivas con tecnología de última generación, acertijos desafiantes y aventuras que pondrán a prueba tu ingenio."
+            link="/escaperoom-game"
+          />
+        </div>
       </section>
 
       <section className="bg-white">
@@ -285,7 +307,7 @@ export default function Home() {
                 className="w-5 h-5"
                 aria-hidden="true"
               />
-              <span>L–D 8:00–23:00</span>
+              <span>L–D 8:00 AM – 11:00 PM</span>
             </li>
           </ul>
           <div className="flex gap-10">

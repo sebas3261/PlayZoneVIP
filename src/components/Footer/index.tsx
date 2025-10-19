@@ -168,7 +168,7 @@ export default function Footer() {
                   className="w-5 h-5"
                   aria-hidden="true"
                 />
-                <span>L–D 8:00–23:00</span>
+                <span>L–D 8:00 AM – 11:00 PM</span>
               </li>
             </ul>
           </address>

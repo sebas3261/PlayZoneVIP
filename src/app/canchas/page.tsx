@@ -109,7 +109,7 @@ export default function Page() {
             <div className="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
               <div className="flex items-center gap-2">
                 <Icon icon="mdi:clock-outline" className="w-[20px] h-[20px]" />
-                Hasta 4:00 PM
+                8:00 AM - 4:00 PM
               </div>
               <p>
                 $70.000 <span className="font-normal">cop</span>
@@ -219,7 +219,7 @@ export default function Page() {
               </li>
               <li className="flex gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
-                <span>Disponibilidad desde las 08:00 AM</span>
+                <span>Disponibilidad desde las 8:00 AM</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
