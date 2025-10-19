@@ -28,7 +28,7 @@ export default function Page() {
 
       <section className="flex flex-wrap justify-center gap-20 px-10 pb-10">
         <PartyCard
-          image="/futbolCard.webp"
+          image="/paintboleroFiesta.webp"
           title="PAINT FUTBOLERO"
           subTitle="10 personas · 2h de fútbol"
           people="10 personas"
@@ -62,7 +62,7 @@ export default function Page() {
         />
 
         <PartyCard
-          image="/futbolCard.webp"
+          image="/escapeFiesta.webp"
           title="ESCAPEROOM"
           subTitle="12 personas · 1h"
           people="12 personas"
@@ -82,7 +82,7 @@ export default function Page() {
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Escape%20Room"
         />
         <PartyCard
-          image="/paint.webp"
+          image="/paintFiesta.webp"
           title="PAINTBOLERO"
           subTitle="12 personas · 1h"
           people="12 personas"
@@ -115,7 +115,7 @@ export default function Page() {
 
         {/* JUEGOS PLAYZONE */}
         <PartyCard
-          image="/juegos.webp"
+          image="/juegosFiesta.webp"
           title="JUEGOS PLAYZONE"
           subTitle="12 personas · 3h"
           people="12 personas"
@@ -146,7 +146,7 @@ export default function Page() {
 
         {/* FUTBOLERO */}
         <PartyCard
-          image="/futbol_estadio.webp"
+          image="/futboleroFiesta.webp"
           title="FUTBOLERO"
           subTitle="10 personas · 3h"
           people="10 personas"

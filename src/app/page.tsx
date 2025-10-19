@@ -5,7 +5,8 @@ import HomeSelectUs from "@/components/HomeSelectUs";
 import Title from "@/components/Title";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -58,13 +59,22 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden">
-      <section
-        className="relative h-[550px] bg-start bg-cover flex items-center lg:bg-center md:h-[654px]"
-        style={{ backgroundImage: "url('/MainHome.webp')" }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative h-[550px] md:h-[654px] flex items-center">
+        {/* Fondo optimizado con Next/Image */}
+        <Image
+          src="/MainHome.webp"
+          alt="Playzone VIP - Deportes y Aventuras en Chía"
+          fill
+          priority // Hero: se carga primero
+          sizes="100vw" // Ocupa todo el ancho de la ventana
+          className="object-cover object-left-top lg:object-center"
+        />
 
-        <div className="z-10 px-8 flex flex-col w-fit gap-2 md:px-20 lg:px-60">
+        {/* Capa oscura */}
+        <div className="absolute inset-0 bg-black/50 z-10" />
+
+        {/* Contenido */}
+        <div className="relative z-20 px-8 flex flex-col w-fit gap-2 md:px-20 lg:px-60">
           <h2 className="text-white text-4xl font-title md:text-6xl lg:text-7xl">
             Playzone VIP
           </h2>
@@ -84,9 +94,7 @@ export default function Home() {
             </button>
             <button
               className="bg-white p-2 rounded-md font-text font-semibold text-xs flex items-center gap-1 cursor-pointer"
-              onClick={() => {
-                router.push("/actividades");
-              }}
+              onClick={() => router.push("/actividades")}
               type="button"
             >
               <Icon icon="solar:widget-6-linear" />
@@ -187,9 +195,13 @@ export default function Home() {
       </section>
 
       <section className="bg-white font-text flex flex-col items-center lg:flex-row-reverse lg:p-10 pb-5">
-        <img
+        <Image
           src="/nosotros.webp"
-          className="lg:w-[638px] lg:h-[422px] lg:rounded-xl"
+          alt="Nosotros en Playzone VIP"
+          width={638}
+          height={422}
+          className="w-full lg:w-[638px] lg:h-[422px] lg:rounded-xl object-cover"
+          sizes="(max-width: 1024px) 100vw, 638px"
         />
         <div className="px-10 py-5 flex flex-col gap-5 justify-center items-center lg:items-start">
           <div className="bg-[#E9EBEF] px-5 py-1 rounded-full">
@@ -277,8 +289,10 @@ export default function Home() {
             </li>
           </ul>
           <div className="flex gap-10">
-            <button className="bg-white text-black font-semibold flex items-center gap-1 p-2 rounded-md w-[162px] text-sm justify-center cursor-pointer"
-            type="button">
+            <button
+              className="bg-white text-black font-semibold flex items-center gap-1 p-2 rounded-md w-[162px] text-sm justify-center cursor-pointer"
+              type="button"
+            >
               <Icon icon="mdi:calendar-outline" />
               Reservar ahora
             </button>

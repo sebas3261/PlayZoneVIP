@@ -3,6 +3,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   image: string;
@@ -36,7 +37,7 @@ export default function Card({
     >
       {/* Imagen (sin hover transform) */}
       <div className="w-full aspect-[566/290] h-[240px] md:aspect-auto md:h-[290px]">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <Image src={image} alt={title} width={800} height={600} className="w-full h-full object-cover"/>
       </div>
 
       {/* Contenido */}

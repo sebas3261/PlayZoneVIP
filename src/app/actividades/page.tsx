@@ -14,6 +14,26 @@ export const metadata: Metadata = {
     "escape room",
     "Playzone VIP",
   ],
+
+  // 🔗 Open Graph
+  openGraph: {
+    title: "Nuestras actividades | Playzone VIP",
+    description:
+      "Vive la emoción del deporte y la aventura. Descubre nuestras actividades: fútbol, pádel, paintball y escape room en Playzone VIP, Chía.",
+    url: "https://playzonevip.com/actividades",
+    siteName: "Playzone VIP",
+    type: "website",
+    locale: "es_CO",
+    images: [
+      {
+        url: "/og-actividades.webp", // coloca aquí una imagen real en /public
+        width: 1200,
+        height: 630,
+        alt: "Actividades deportivas en Playzone VIP",
+      },
+    ],
+  },
+
 };
 
 export default function Page() {
@@ -37,7 +57,7 @@ export default function Page() {
         <ActivityCard
           image="/futbolCard.webp"
           title="Canchas sinteticas"
-          subTitle="Es hora de vivir la adrenalina con tus amigos"
+          subTitle="Es hora de vivir la adrenalina con tus amigos."
           time="1h"
           people="10-16"
           link = "canchas"
@@ -45,7 +65,7 @@ export default function Page() {
         <ActivityCard
           image="/padelCard.webp"
           title="Padel"
-          subTitle="¡Que empiece el juego! Tenemos todo listo para que mejores tus habilidades,"
+          subTitle="¡Que empiece el juego! Tenemos todo listo para que mejores tus habilidades."
           time="1h 30m"
           people="4"
           link="padel"
@@ -61,7 +81,7 @@ export default function Page() {
         <ActivityCard
           image="/escapeCard.webp"
           title="Escape room"
-          subTitle="Afinen su lógica y prepárense para un reto lleno de adrenalina."
+          subTitle="Afina tu lógica y prepárate para un reto lleno de adrenalina."
           time="1h"
           people="6"
           link="escaperoom-game"

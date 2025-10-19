@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   image: string;
@@ -45,8 +45,14 @@ export default function PartyCard({
       "
     >
       {/* Imagen */}
-      <div className="w-full aspect-[566/290] h-[240px] md:aspect-auto md:h-[290px]">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+      <div className="w-full aspect-[566/290] h-[240px] md:aspect-auto md:h-[290px] relative">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, 566px"
+          className="object-cover rounded-lg"
+        />
       </div>
 
       {/* Contenido */}
@@ -93,7 +99,9 @@ export default function PartyCard({
         {/* Bloques de detalles (Paintball / Fútbol / etc.) */}
         {details.map((section, i) => (
           <div key={i} className="mb-3">
-            <h4 className="font-semibold text-gray-900 mb-1">{section.title}</h4>
+            <h4 className="font-semibold text-gray-900 mb-1">
+              {section.title}
+            </h4>
             <ul className="text-gray-700 text-sm md:text-base list-disc ml-5 space-y-1">
               {section.items.map((item, j) => (
                 <li key={j}>{item}</li>
