@@ -77,7 +77,7 @@ export default function index({
             className="
               w-full flex items-center justify-center gap-2 py-3
               text-white rounded-xl text-sm md:text-base font-semibold
-              bg-gradient-to-br from-[#713478] to-[#b76cbf]
+              bg-black
               shadow-[0_4px_10px_rgba(0,0,0,0.3)]
               hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)]
               active:translate-y-[1px]
