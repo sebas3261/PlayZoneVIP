@@ -1,6 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import EscapeCard from "@/components/EscapeCard";
+import Title from "@/components/Title";
 
 export const metadata: Metadata = {
   title: "Escape Room",
@@ -58,6 +60,27 @@ export default function page() {
           <br />
           DOMINGO A DOMINGO DE 2pm - 11 pm
         </h3>
+      </section>
+
+      <section className="flex flex-wrap justify-center gap-10 px-8">
+        <EscapeCard
+          image="/images/Escape/escapeHeader.webp"
+          title="SAW"
+          subTitle={"Jigsaw ha atrapado a tu grupo de amigos y los tiene encerrados en una habitación aterradora.\nTienen 60 minutos para descifrar sus macabros acertijos, usar cada recurso disponible y trabajar en equipo para escapar con vida. ¿Lograrán salir antes de que sea demasiado tarde? "}
+          people="4"
+          time="1h"
+        />
+        <EscapeCard
+          image="/images/Escape/escapeHeader.webp"
+          title="¡En Busca del Asesino!"
+          subTitle={"¡El famoso millonario ha sido asesinado en su propia mansión!\nAhora, tienes 60 minutos para descubrir quién cometió el crimen, con qué arma y en qué lugar sucedió. Explora la escena, sigue las pistas, resuelve los acertijos y reúne todas las pruebas.\nSolo los mejores detectives podrán armar el caso y hacer su declaración final antes de que el tiempo se agote.\n¿Estás listo para encontrar al asesino? "}
+          people="4"
+          time="1h"
+        />
+      </section>
+
+      <section>
+        <Title titulo="Precios" subTitulo="Tarifas por Grupo" descripcion="El precio varía según el número de personas en tu grupo. Cuantos más seáis, más económico resulta por persona."/>
       </section>
     </main>
   );

@@ -30,13 +30,19 @@ export default function index({
         overflow-hidden rounded-2xl bg-white font-text
         shadow-[0_4px_10px_3px_rgba(0,0,0,0.3)]
         flex flex-col
-        md:w-[566px] md:h-[590px]
+        md:w-[566px]
         transition-all duration-300 hover:scale-[1.02]
       "
     >
       {/* Imagen (sin hover transform) */}
       <div className="w-full aspect-[566/290] h-[240px] md:aspect-auto md:h-[290px]">
-        <Image src={image} alt={title} width={800} height={600} className="w-full h-full object-cover"/>
+        <Image
+          src={image}
+          alt={title}
+          width={800}
+          height={600}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Contenido */}
@@ -44,7 +50,6 @@ export default function index({
         <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900 font-title">
           {title}
         </h3>
-        <p className="text-gray-700 text-base md:text-lg mb-4">{subTitle}</p>
 
         {/* Info (más grande) */}
         <div className="flex justify-between items-center text-base md:text-lg text-gray-600 mb-6">
@@ -58,11 +63,17 @@ export default function index({
           </span>
         </div>
 
+        <p className="whitespace-pre-line text-gray-700 text-sm md:text-lg mb-4">
+          {subTitle}
+        </p>
+
         {/* Botones: columna en móvil, fila en md+ */}
         <div className="mt-auto flex flex-col gap-3 md:flex-row md:gap-4">
           {/* Más información (gradiente fijo) */}
           <Link
             href={link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               w-full flex items-center justify-center gap-2 py-3
               text-white rounded-xl text-sm md:text-base font-semibold
@@ -77,58 +88,6 @@ export default function index({
             <Icon icon="mdi:information-outline" className="w-5 h-5" />
             Más información
           </Link>
-
-          {/* Contáctanos (borde -> gradiente en hover, con contraste correcto) */}
-          <button
-            onClick={() => {
-              // Asigna el número según el título
-              let phone = "573132485526"; // número general
-              if (
-                title.toLowerCase().includes("pádel") ||
-                title.toLowerCase().includes("padel")
-              ) {
-                phone = "573105655602"; // número exclusivo para pádel
-              }
-
-              // Mensaje dinámico
-              const message = `Hola, quiero más información sobre ${title}`;
-              const url = `https://wa.me/${phone}?text=${encodeURIComponent(
-                message
-              )}`;
-              window.open(url, "_blank");
-            }}
-            className="
-              group w-full relative overflow-hidden
-              rounded-xl text-sm md:text-base font-semibold
-              border-2 border-[#b76cbf] text-[#713478]
-              flex items-center justify-center gap-2 py-3
-              transition-all duration-300
-              focus:outline-none focus:ring-2 focus:ring-[#b76cbf]/60
-              cursor-pointer
-            "
-          >
-            {/* Fondo animado (gradiente) */}
-            <span
-              aria-hidden
-              className="
-                absolute inset-0
-                bg-gradient-to-br from-[#713478] to-[#b76cbf]
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-300
-              "
-            />
-            {/* Contenido: garantiza contraste en hover */}
-            <span
-              className="
-                relative z-10 flex items-center gap-2
-                transition-colors duration-300
-                group-hover:text-white
-              "
-            >
-              <Icon icon="mdi:whatsapp" className="w-5 h-5" />
-              Contáctanos
-            </span>
-          </button>
         </div>
       </div>
     </div>
