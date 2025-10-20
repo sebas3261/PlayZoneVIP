@@ -177,13 +177,13 @@ export default function Footer() {
       <div className="mt-5 flex justify-between flex-col md:flex-row">
         <div>
           <p>
-            © 2025 - Play Zone VIP
+            © 2025 - Play Zone VIP b
             <a
               href="https://www.linkedin.com/in/sebastian-sanchez-sandoval-3ab3b327a"
               target="_blank"
               rel="noopener noreferrer"
             >
-              by Sebastian Sanchez
+              y Sebastian Sanchez
             </a>
           </p>
         </div>
