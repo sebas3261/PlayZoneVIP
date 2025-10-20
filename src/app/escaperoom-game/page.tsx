@@ -115,7 +115,7 @@ export default function page() {
         <div className="snap-center shrink-0">
           <PriceCard
             icon="mdi:account-multiple-outline"
-            title="2 persona"
+            title="2 personas"
             total="$100.000 cop"
             perPerson="$50.000 / persona"
             ctaHref="https://wa.me/573132485526?text=Quiero%20reservar%20para%202%20personas"

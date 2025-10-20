@@ -17,7 +17,7 @@ export default function Footer() {
           <h2 className="font-title text-2xl mb-1">PLAYZONE VIP</h2>
           <p className="max-w-[48ch] mb-6 text-sm md:text-base">
             Tu centro de entretenimiento deportivo donde la diversión no tiene
-            límites. Fútbol, Pádel, Paintball y Escape Room en un solo lugar.
+            límites. fútbol, pádel, paintball y escape room en un solo lugar.
           </p>
 
           <div className="flex gap-3 mb-5">
@@ -176,7 +176,16 @@ export default function Footer() {
       </div>
       <div className="mt-5 flex justify-between flex-col md:flex-row">
         <div>
-          <p>© 2025 - Play Zone VIP</p>
+          <p>
+            © 2025 - Play Zone VIP
+            <a
+              href="https://www.linkedin.com/in/sebastian-sanchez-sandoval-3ab3b327a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              by Sebastian Sanchez
+            </a>
+          </p>
         </div>
         <ul className="flex flex-col gap-1 mt-2 sm:flex-row sm:gap-4 md:mt-0">
           <li>

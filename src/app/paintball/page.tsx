@@ -160,7 +160,7 @@ export default function page() {
         <Title
           titulo="Zona de Recargas"
           subTitulo="Adición de Bolas"
-          descripcion="Recarga tu juego y continúa la diversión. En esta zona podrás añadir más bolas a tu partida de Paintball y disfrutar sin interrupciones."
+          descripcion="Recarga tu juego y continúa la diversión. En esta zona podrás añadir más bolas a tu partida de paintball y disfrutar sin interrupciones."
         />
       </section>
 

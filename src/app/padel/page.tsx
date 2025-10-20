@@ -64,20 +64,13 @@ export default function Page() {
 
       {/* INTRO + VIDEO */}
       <section className="px-6 md:px-12 lg:px-28 pb-10">
-        <div className="grid gap-6 md:grid-cols-2 md:gap-10 items-center">
+        <div className="grid gap-6 md:grid-cols-2 md:gap-10 items-center text-center md:text-start">
           <div>
             <h2 className="font-title text-2xl md:text-3xl mb-3">
               ¡Que empiece el juego!
             </h2>
             <p className="text-[#5a5a5a] leading-relaxed">
-              Tenemos todo listo para que mejores tus habilidades, superes tus
-              propios límites y te diviertas a lo grande. Contamos con 2 canchas
-              de pádel profesionales, espacios ideales para entrenar,
-              perfeccionar tu técnica o simplemente jugar con tu parche.
-            </p>
-            <p className="text-[#5a5a5a] leading-relaxed mt-3">
-              Y lo mejor: nuestros profes están listos para acompañarte en cada
-              golpe, punto y aprendizaje.
+              Tenemos todo listo para que entrenes, te retes, mejores y disfrutes al máximo. Contamos con dos canchas de pádel profesionales, perfectas para entrenar o jugar con tu parche, y profesores que te acompañan en cada punto.
             </p>
           </div>
 

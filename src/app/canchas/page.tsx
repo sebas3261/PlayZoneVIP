@@ -107,7 +107,7 @@ export default function Page() {
           {/* Slots (ejemplo no repetido) */}
           <div className="space-y-2">
             <div className="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center md:gap-2">
                 <Icon icon="mdi:clock-outline" className="w-[20px] h-[20px]" />
                 8:00 AM - 4:00 PM
               </div>
@@ -116,7 +116,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center md:gap-2">
                 <Icon icon="mdi:clock-outline" className="w-[20px] h-[20px]" />
                 4:00 PM – 6:00 PM
               </div>
@@ -125,7 +125,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center md:gap-2">
                 <Icon icon="mdi:clock-outline" className="w-[20px] h-[20px]" />
                 6:00 PM – 7:00 PM
               </div>
@@ -134,7 +134,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center md:gap-2">
                 <Icon icon="mdi:clock-outline" className="w-[20px] h-[20px]" />
                 7:00 PM – 9:00 PM
               </div>
@@ -143,7 +143,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold mb-10">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center md:gap-2">
                 <Icon icon="mdi:clock-outline" className="w-[20px] h-[20px]" />
                 9:00 PM – 10:00 PM
               </div>

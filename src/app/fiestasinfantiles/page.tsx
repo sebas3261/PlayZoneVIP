@@ -74,8 +74,8 @@ export default function Page() {
           notes={[
             "Prohibido el uso de guayos",
             "Ser puntuales",
-            "Valor persona adicional $30.000",
-            "Recarga adicional 100 balas $13.000",
+            "Valor persona adicional: $30.000",
+            "Recarga adicional 100 balas: $13.000",
           ]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Paint%20Futbolero"
         />
@@ -122,8 +122,8 @@ export default function Page() {
             {
               title: "Notas",
               items: [
-                "Valor persona adicional $30.000",
-                "Recarga adicional 100 balas $13.000",
+                "Valor persona adicional: $30.000",
+                "Recarga adicional 100 balas: $13.000",
                 "Prohibido el uso de guayos",
                 "Ser puntuales",
               ],
