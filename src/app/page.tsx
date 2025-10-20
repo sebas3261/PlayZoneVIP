@@ -7,6 +7,7 @@ import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -85,7 +86,7 @@ export default function Home() {
 
           <div className="flex flex-col w-fit gap-2 md:flex-row md:gap-7">
             <button
-              className="bg-white p-2 rounded-md font-text font-semibold text-xs flex items-center gap-1 cursor-pointer"
+              className="bg-white p-2 rounded-md font-text font-semibold text-xs flex items-center gap-1 cursor-pointer md:text-base md:gap-2"
               onClick={handleWhatsApp}
               type="button"
             >
@@ -93,7 +94,7 @@ export default function Home() {
               Reservar ahora
             </button>
             <button
-              className="bg-white p-2 rounded-md font-text font-semibold text-xs flex items-center gap-1 cursor-pointer"
+              className="bg-white p-2 rounded-md font-text font-semibold text-xs flex items-center gap-1 cursor-pointer md:text-base md:gap-2"
               onClick={() => router.push("/actividades")}
               type="button"
             >
@@ -116,16 +117,18 @@ export default function Home() {
         className="
     scroll-hide
     bg-white
-    flex
-    gap-10
-    overflow-x-auto             /* scroll horizontal solo en móvil */
+    flex gap-10
+    overflow-x-auto             /* scroll siempre que haga falta */
     snap-x snap-mandatory
     scroll-smooth
     px-5 py-10
-    justify-start               /* por defecto: empieza alineado */
-    md:justify-center           /* en pantallas medianas o mayores: centra */
-    md:overflow-x-visible       /* quita scroll cuando hay espacio suficiente */
+    justify-start
+    md:justify-start            /* NO centres en md; aún puede faltar espacio */
+    lg:justify-center           /* céntralo recién desde lg en adelante */
+    md:overflow-x-auto          /* sigue permitiendo scroll en md */
+    xl:overflow-x-visible       /* en lg, ya suele caber todo: quita scroll */
   "
+        aria-label="Actividades"
       >
         <div className="snap-center shrink-0">
           <HomeBoxes
@@ -316,18 +319,19 @@ export default function Home() {
           <div className="flex gap-10">
             <button
               className="bg-white text-black font-semibold flex items-center gap-1 p-2 rounded-md w-[162px] text-sm justify-center cursor-pointer"
+              onClick={handleWhatsApp}
               type="button"
             >
               <Icon icon="mdi:calendar-outline" />
               Reservar ahora
             </button>
-            <button
-              className="bg-white text-black font-semibold p-2 rounded-md w-[162px] text-sm cursor-pointer"
-              onClick={handleWhatsApp}
+            <Link
+              className="bg-white text-black font-semibold p-2 rounded-md w-[162px] text-sm cursor-pointer flex item-center justify-center"
+              href="/contacto"
               type="button"
             >
               Mas informacion
-            </button>
+            </Link>
           </div>
         </div>
       </section>

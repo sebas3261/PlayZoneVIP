@@ -109,7 +109,7 @@ export default function page() {
     pb-5
     justify-start                /* alineado al inicio por defecto */
     md:justify-center            /* centrado en pantallas grandes */
-    md:overflow-x-visible        /* sin scroll horizontal en desktop */
+    lg:overflow-x-visible        /* sin scroll horizontal en desktop */
   "
       >
         <div className="snap-center shrink-0">
