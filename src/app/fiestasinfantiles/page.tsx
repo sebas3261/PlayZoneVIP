@@ -49,9 +49,9 @@ export default function Page() {
         <PartyCard
           image="/images/Fiestas/paintboleroFiesta.webp"
           title="PAINT FUTBOLERO"
-          subTitle="10 personas · 2h de fútbol"
+          subTitle="10 personas · 3h de fútbol"
           people="10 personas"
-          time="2h de fútbol"
+          time="3h de fútbol"
           price="$690.000"
           features={[
             "Espacio con decoración básica (bombas y mesa de torta)",
@@ -72,7 +72,6 @@ export default function Page() {
             },
           ]}
           notes={[
-            "Prohibido el uso de guayos",
             "Ser puntuales",
             "Valor persona adicional: $30.000",
             "Recarga adicional 100 balas: $13.000",
@@ -83,9 +82,9 @@ export default function Page() {
         <PartyCard
           image="/images/Fiestas/escapeFiesta.webp"
           title="ESCAPEROOM"
-          subTitle="12 personas · 1h"
+          subTitle="12 personas · 3h"
           people="12 personas"
-          time="1h"
+          time="3h"
           price="$465.000"
           features={[
             "Espacio con decoración básica (bombas y mesa de torta)",
@@ -103,9 +102,9 @@ export default function Page() {
         <PartyCard
           image="/images/Fiestas/paintFiesta.webp"
           title="PAINTBOLERO"
-          subTitle="12 personas · 1h"
+          subTitle="12 personas · 3h"
           people="12 personas"
-          time="1h"
+          time="3h"
           price="$480.000"
           features={[
             "Espacio con decoración básica (bombas y mesa de torta)",
@@ -124,7 +123,6 @@ export default function Page() {
               items: [
                 "Valor persona adicional: $30.000",
                 "Recarga adicional 100 balas: $13.000",
-                "Prohibido el uso de guayos",
                 "Ser puntuales",
               ],
             },
@@ -157,7 +155,7 @@ export default function Page() {
             },
             {
               title: "Notas",
-              items: ["Prohibido el uso de guayos", "Ser puntuales"],
+              items: ["Ser puntuales"],
             },
           ]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Juegos%20Playzone"
@@ -179,7 +177,7 @@ export default function Page() {
           details={[
             {
               title: "Notas",
-              items: ["Prohibido el uso de guayos", "Ser puntuales"],
+              items: ["Ser puntuales"],
             },
           ]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Futbolero"
