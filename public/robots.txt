@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://play-zone-vip.vercel.app
+
+# Sitemaps
+Sitemap: https://play-zone-vip.vercel.app/sitemap.xml

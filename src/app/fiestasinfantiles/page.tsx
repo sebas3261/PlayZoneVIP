@@ -48,43 +48,35 @@ export default function Page() {
       <section className="flex flex-wrap justify-center gap-20 px-10 pb-10">
         <PartyCard
           image="/images/Fiestas/paintboleroFiesta.webp"
-          title="PAINT FUTBOLERO"
-          subTitle="10 personas · 3h de fútbol"
+          title="PAINT FUTBOLERO PLAYZONE"
+          subTitle="10 personas · 2 horas de fútbol"
           people="10 personas"
-          time="3h de fútbol"
-          price="$690.000"
+          time="2 horas de fútbol"
+          price="$795.000"
           features={[
             "Espacio con decoración básica (bombas y mesa de torta)",
+            "Juego de paintball para 10 personas",
+            "Equipo de protección (overol, chaleco y careta)",
+            "100 bolas de paintball por persona",
+            "2 horas de cancha de fútbol",
             "Acompañamiento dirigido",
             "10 paquetes de gomitas",
           ]}
-          details={[
-            {
-              title: "Paintball",
-              items: [
-                "Equipo de protección",
-                "100 balas de paintball por persona",
-              ],
-            },
-            {
-              title: "Fútbol",
-              items: ["2 horas de cancha"],
-            },
-          ]}
           notes={[
-            "Ser puntuales",
-            "Valor persona adicional: $30.000",
-            "Recarga adicional 100 balas: $13.000",
+            "Valor adicional por persona: $35.000",
+            "Recarga adicional de 100 bolas: $15.000",
+            "Se recomienda puntualidad",
+            "Prohibido el uso de guayos",
           ]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Paint%20Futbolero"
         />
 
         <PartyCard
           image="/images/Fiestas/escapeFiesta.webp"
-          title="ESCAPEROOM"
-          subTitle="12 personas · 3h"
+          title="PLAN ESCAPE ROOM"
+          subTitle="12 personas · Sala de escape"
           people="12 personas"
-          time="3h"
+          time="Sala de escape"
           price="$465.000"
           features={[
             "Espacio con decoración básica (bombas y mesa de torta)",
@@ -92,95 +84,111 @@ export default function Page() {
           ]}
           details={[
             {
-              title: "Juego de escape para 12 personas",
+              title: "Juego de sala de escape para 12 personas",
               items: ["6 personas en SAW", "6 personas en Busca del asesino"],
             },
           ]}
-          notes={["Ser puntuales"]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Escape%20Room"
         />
+
         <PartyCard
           image="/images/Fiestas/paintFiesta.webp"
-          title="PAINTBOLERO"
-          subTitle="12 personas · 3h"
+          title="PLAN PAINTBOLERO PLAYZONE"
+          subTitle="12 personas · Paintball"
           people="12 personas"
-          time="3h"
-          price="$480.000"
+          time="Paintball"
+          price="$560.000"
           features={[
+            "Juego de paintball para 12 personas",
+            "Equipo de protección (overol, chaleco y careta)",
+            "100 bolas de paintball por persona",
+            "Salón",
             "Espacio con decoración básica (bombas y mesa de torta)",
             "12 paquetes de gomitas",
           ]}
-          details={[
-            {
-              title: "Paintball",
-              items: [
-                "Equipo de protección",
-                "100 balas de paintball por persona",
-              ],
-            },
-            {
-              title: "Notas",
-              items: [
-                "Valor persona adicional: $30.000",
-                "Recarga adicional 100 balas: $13.000",
-                "Ser puntuales",
-              ],
-            },
+          notes={[
+            "Valor adicional por persona: $35.000",
+            "Recarga adicional de 100 bolas: $15.000",
           ]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Paintbolero"
         />
 
-        {/* JUEGOS PLAYZONE */}
         <PartyCard
           image="/images/Fiestas/juegosFiesta.webp"
-          title="JUEGOS PLAYZONE"
-          subTitle="12 personas · 3h"
-          people="12 personas"
-          time="3 h"
-          price="$545.000"
+          title="PLAN JUEGOS PLAYZONE"
+          subTitle="12 niños · 3 horas"
+          people="12 niños"
+          time="3 horas"
+          price="$645.000"
           features={[
+            "Acompañamiento dirigido",
+            "Cancha sintética por 3 horas",
             "Espacio con decoración básica (bombas y mesa de torta)",
             "12 paquetes de gomitas",
             "Juegos competitivos",
-            "Acompañamiento dirigido",
+            "Tiro al blanco paintball",
+            "Plan para 12 niños",
           ]}
-          details={[
-            {
-              title: "Futbol",
-              items: ["3 horas de cancha"],
-            },
-            {
-              title: "Paintball",
-              items: ["Tiro al blanco"],
-            },
-            {
-              title: "Notas",
-              items: ["Ser puntuales"],
-            },
-          ]}
+          notes={["Se recomienda puntualidad", "Prohibido el uso de guayos"]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Juegos%20Playzone"
         />
 
-        {/* FUTBOLERO */}
         <PartyCard
           image="/images/Fiestas/futboleroFiesta.webp"
-          title="FUTBOLERO"
-          subTitle="10 personas · 3h"
-          people="10 personas"
-          time="3h"
-          price="$400.000"
+          title="PLAN FUTBOLERO PLAYZONE 3H"
+          subTitle="10 niños · 3 horas"
+          people="10 niños"
+          time="3 horas"
+          price="$460.000"
           features={[
+            "3 horas de cancha de fútbol",
+            "Terraza exclusiva durante 3 horas",
             "Espacio con decoración básica (bombas y mesa de torta)",
             "10 paquetes de gomitas",
-            "3 horas de cancha de fútbol",
           ]}
-          details={[
-            {
-              title: "Notas",
-              items: ["Ser puntuales"],
-            },
-          ]}
+          notes={["Se recomienda puntualidad", "Prohibido el uso de guayos"]}
           ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Futbolero"
+        />
+
+        <PartyCard
+          image="/images/Fiestas/fiestaStock.webp"
+          title="MISIÓN DOBLE"
+          subTitle="6 niños · Paintball + escape"
+          people="6 niños"
+          time="Paintball + escape"
+          price="$480.000"
+          features={[
+            "Juego de paintball para 6 personas",
+            "Equipo de protección (overol, chaleco y careta)",
+            "100 bolas de paintball por persona",
+            "Juego de sala de escape para 6 personas (SAW o En busca del asesino)",
+            "Salón",
+            "Decoración básica",
+            "6 paquetes de gomitas",
+          ]}
+          notes={[
+            "Valor adicional por persona: $60.000",
+            "Recarga adicional de 100 bolas: $15.000",
+          ]}
+          ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20Misi%C3%B3n%20Doble"
+        />
+
+        <PartyCard
+          image="/images/Padel/padelHeader.webp"
+          title="PLAN PÁDEL PLAYZONE VIP"
+          subTitle="12 niños · 2 canchas x 3 horas"
+          people="12 niños"
+          time="3 horas"
+          price="$490.000"
+          features={[
+            "Terraza con decoración básica (bombas y mesa de torta)",
+            "Inducción de pádel",
+            "2 canchas de pádel por 3 horas cada una",
+            "Palas y bolas",
+            "Campeonato para 12 niños",
+            "12 paquetes de gomitas",
+          ]}
+          ctaHref="https://wa.me/573132485526?text=Hola%2C%20quiero%20reservar%20P%C3%A1del%20Playzone%20VIP"
         />
       </section>
     </main>
