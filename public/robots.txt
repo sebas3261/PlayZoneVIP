@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://play-zone-vip.vercel.app
+Host: https://playzonevip.com
 
 # Sitemaps
-Sitemap: https://play-zone-vip.vercel.app/sitemap.xml
+Sitemap: https://playzonevip.com/sitemap-index.xml

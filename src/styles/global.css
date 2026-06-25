@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-text: "Montserrat", system-ui, sans-serif;
+  --font-title: "Sprintura", "Montserrat", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: "Sprintura";
+  src: url("/fonts/Sprintura Demo.otf") format("opentype");
+  font-display: swap;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

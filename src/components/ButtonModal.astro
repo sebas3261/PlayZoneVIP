@@ -1,0 +1,157 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+  type="button"
+  data-button-modal-open
+  class="group w-full relative overflow-hidden rounded-xl text-sm md:text-base font-semibold border-2 border-black text-black flex items-center justify-center gap-2 py-3 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#b76cbf]/60 cursor-pointer"
+>
+  <span
+    aria-hidden
+    class="absolute inset-0 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  ></span>
+  <span class="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-white">
+    <Icon name="solar:calendar-linear" class="w-5 h-5" />
+    Ver horarios
+  </span>
+</button>
+
+<div
+  id="padel-schedule-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Horarios de Padel"
+  class="fixed inset-0 z-[9999] hidden"
+>
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-modal-backdrop></div>
+
+  <div class="relative z-10 flex h-full w-full items-center justify-center p-4">
+    <div class="absolute top-4 right-4 flex items-center gap-2">
+      <button
+        type="button"
+        data-zoom-toggle
+        class="rounded-md bg-white/90 px-3 py-1.5 text-sm shadow hover:bg-white"
+        title="Activar zoom"
+      >
+        Zoom: OFF
+      </button>
+
+      <button
+        type="button"
+        data-zoom-out
+        class="rounded-md bg-white/90 px-2 py-1 text-sm shadow hover:bg-white hidden"
+        title="Alejar"
+      >
+        −
+      </button>
+      <button
+        type="button"
+        data-zoom-in
+        class="rounded-md bg-white/90 px-2 py-1 text-sm shadow hover:bg-white hidden"
+        title="Acercar"
+      >
+        +
+      </button>
+
+      <button
+        type="button"
+        data-modal-close
+        class="rounded-md bg-white/90 p-2 shadow hover:bg-white"
+        aria-label="Cerrar"
+        title="Cerrar"
+      >
+        <Icon name="mdi:close" class="w-5 h-5" />
+      </button>
+    </div>
+
+    <div
+      data-modal-scroll
+      class="max-h-[85vh] max-w-[95vw] overflow-hidden rounded-xl bg-transparent"
+    >
+      <div
+        data-zoom-wrap
+        class="inline-block transition-transform duration-150 cursor-default"
+        style="transform-origin: center center;"
+      >
+        <img
+          src="/images/Padel/padelHorarios.webp"
+          alt="Horarios de Padel"
+          width="1200"
+          height="1600"
+          class="block h-auto w-auto max-h-[85vh] max-w-[95vw] select-none"
+          draggable="false"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const openBtns = document.querySelectorAll<HTMLButtonElement>("[data-button-modal-open]");
+  const modal = document.getElementById("padel-schedule-modal");
+  const backdrop = modal?.querySelector<HTMLElement>("[data-modal-backdrop]");
+  const closeBtn = modal?.querySelector<HTMLButtonElement>("[data-modal-close]");
+  const zoomToggle = modal?.querySelector<HTMLButtonElement>("[data-zoom-toggle]");
+  const zoomInBtn = modal?.querySelector<HTMLButtonElement>("[data-zoom-in]");
+  const zoomOutBtn = modal?.querySelector<HTMLButtonElement>("[data-zoom-out]");
+  const scrollWrap = modal?.querySelector<HTMLElement>("[data-modal-scroll]");
+  const zoomWrap = modal?.querySelector<HTMLElement>("[data-zoom-wrap]");
+
+  let zoomEnabled = false;
+  let zoom = 1;
+
+  function applyZoomState() {
+    if (!zoomWrap || !scrollWrap || !zoomToggle || !zoomInBtn || !zoomOutBtn) return;
+    zoomWrap.style.transform = zoomEnabled ? `scale(${zoom})` : "none";
+    zoomWrap.classList.toggle("cursor-zoom-in", zoomEnabled && zoom === 1);
+    zoomWrap.classList.toggle("cursor-zoom-out", zoomEnabled && zoom > 1);
+    zoomWrap.classList.toggle("cursor-default", !zoomEnabled);
+    scrollWrap.classList.toggle("overflow-auto", zoomEnabled && zoom > 1);
+    scrollWrap.classList.toggle("overflow-hidden", !(zoomEnabled && zoom > 1));
+    zoomToggle.textContent = zoomEnabled ? "Zoom: ON" : "Zoom: OFF";
+    zoomToggle.title = zoomEnabled ? "Desactivar zoom" : "Activar zoom";
+    zoomInBtn.classList.toggle("hidden", !zoomEnabled);
+    zoomOutBtn.classList.toggle("hidden", !zoomEnabled);
+  }
+
+  function openModal() {
+    if (!modal) return;
+    zoomEnabled = false;
+    zoom = 1;
+    modal.classList.remove("hidden");
+    applyZoomState();
+  }
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.add("hidden");
+    zoomEnabled = false;
+    zoom = 1;
+    applyZoomState();
+  }
+
+  openBtns.forEach((b) => b.addEventListener("click", openModal));
+  closeBtn?.addEventListener("click", closeModal);
+  backdrop?.addEventListener("click", closeModal);
+  zoomToggle?.addEventListener("click", () => {
+    zoomEnabled = !zoomEnabled;
+    zoom = 1;
+    applyZoomState();
+  });
+  zoomInBtn?.addEventListener("click", () => {
+    zoom = Math.min(3, +(zoom + 0.25).toFixed(2));
+    applyZoomState();
+  });
+  zoomOutBtn?.addEventListener("click", () => {
+    zoom = Math.max(1, +(zoom - 0.25).toFixed(2));
+    applyZoomState();
+  });
+  zoomWrap?.addEventListener("dblclick", () => {
+    if (!zoomEnabled) return;
+    zoom = zoom === 1 ? 2 : 1;
+    applyZoomState();
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && !modal.classList.contains("hidden")) closeModal();
+  });
+</script>

@@ -1,0 +1,121 @@
+---
+import "@/styles/global.css";
+import NavBar from "@/components/NavBar.astro";
+import Footer from "@/components/Footer.astro";
+
+type OgImage = { url: string; width?: number; height?: number; alt?: string };
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  openGraph?: {
+    title?: string;
+    description?: string;
+    url?: string;
+    type?: string;
+    locale?: string;
+    images?: OgImage[];
+  };
+  twitter?: {
+    title?: string;
+    description?: string;
+    images?: string[];
+  };
+}
+
+const {
+  title,
+  description = "Reserva pádel, paintball, escape rooms y canchas de fútbol sintético en PlayZone VIP, Chía. Eventos, fiestas y planes para grupos. ¡Agenda tu experiencia!",
+  keywords = [
+    "PlayZone VIP",
+    "paintball Chía",
+    "pádel Chía",
+    "escape room Chía",
+    "canchas sintéticas Chía",
+    "deportes Chía",
+  ],
+  canonical = "/",
+  openGraph,
+  twitter,
+} = Astro.props;
+
+const defaultTitle = "PlayZone VIP — Deportes y Aventuras en Chía";
+const fullTitle = title ? `${title} | PlayZone VIP` : defaultTitle;
+
+const og = {
+  type: openGraph?.type ?? "website",
+  locale: openGraph?.locale ?? "es_CO",
+  url: openGraph?.url ?? new URL(canonical, Astro.site ?? "https://playzonevip.com").toString(),
+  siteName: "PlayZone VIP",
+  title: openGraph?.title ?? fullTitle,
+  description: openGraph?.description ?? description,
+  images: openGraph?.images ?? [
+    {
+      url: "/Logo.png",
+      width: 1200,
+      height: 630,
+      alt: "PlayZone VIP: pádel, paintball y escape rooms en Chía",
+    },
+  ],
+};
+
+const tw = {
+  title: twitter?.title ?? "PlayZone VIP — Deportes y Aventuras en Chía",
+  description:
+    twitter?.description ??
+    "Reserva pádel, paintball, escape rooms y fútbol sintético en Chía.",
+  images: twitter?.images ?? ["/og-playzone.jpg"],
+};
+
+const canonicalUrl = new URL(canonical, Astro.site ?? "https://playzonevip.com").toString();
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="/Logo.png" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(", ")} />
+    <meta name="application-name" content="PlayZone VIP" />
+    <meta name="author" content="PlayZone VIP" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+
+    <meta property="og:type" content={og.type} />
+    <meta property="og:locale" content={og.locale} />
+    <meta property="og:url" content={og.url} />
+    <meta property="og:site_name" content={og.siteName} />
+    <meta property="og:title" content={og.title} />
+    <meta property="og:description" content={og.description} />
+    {og.images.map((img) => (
+      <>
+        <meta property="og:image" content={img.url} />
+        {img.width && <meta property="og:image:width" content={String(img.width)} />}
+        {img.height && <meta property="og:image:height" content={String(img.height)} />}
+        {img.alt && <meta property="og:image:alt" content={img.alt} />}
+      </>
+    ))}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@playzonevip" />
+    <meta name="twitter:title" content={tw.title} />
+    <meta name="twitter:description" content={tw.description} />
+    {tw.images.map((src) => <meta name="twitter:image" content={src} />)}
+  </head>
+  <body class="font-text antialiased bg-[#030213]">
+    <NavBar />
+    <slot />
+    <Footer />
+  </body>
+</html>

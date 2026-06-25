@@ -1,0 +1,198 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Title from "@/components/Title.astro";
+import { Icon } from "astro-icon/components";
+
+const reservaSemanaUrl =
+  "https://wa.me/573132485526?text=" +
+  encodeURIComponent(
+    "Hola, quiero reservar una cancha de futbol entre semana para el horario de "
+  );
+
+const reservaFinSemanaUrl =
+  "https://wa.me/573132485526?text=" +
+  encodeURIComponent("Hola, quiero reservar una cancha de futbol para el fin de semana.");
+---
+
+<Layout
+  title="Canchas de Fútbol"
+  description="Reserva las mejores canchas sintéticas de fútbol en Playzone VIP, Chía. Espacios amplios, iluminación profesional y todo lo que necesitas para tu partido perfecto."
+  keywords={["canchas de fútbol", "canchas sintéticas", "reservar cancha", "fútbol 5", "fútbol 7", "fútbol en Chía", "Playzone VIP"]}
+  canonical="/canchas"
+  openGraph={{
+    title: "Canchas de Fútbol | Playzone VIP",
+    description:
+      "Juega con tus amigos en las mejores canchas sintéticas de Chía. Reserva tu espacio en Playzone VIP y vive la pasión del fútbol con instalaciones de primera.",
+    url: "https://playzonevip.com/canchas",
+    images: [
+      { url: "/og-canchas.webp", width: 1200, height: 630, alt: "Canchas de fútbol en Playzone VIP" },
+    ],
+  }}
+>
+  <main class="bg-white font-text">
+    <section>
+      <img
+        src="/images/Canchas/canchasHeader.webp"
+        alt="Canchas header"
+        width="1600"
+        height="900"
+        fetchpriority="high"
+        class="w-full h-[300px] object-cover object-[center_70%] mb-10 md:h-[400px]"
+      />
+    </section>
+
+    <section class="flex flex-col justify-center items-center gap-2 mb-10 px-6">
+      <h2 class="font-title text-3xl text-center">Canchas Sinteticas</h2>
+      <h3 class="text-center text-[#828292] text-sm font-[600]">
+        Es hora de vivir la adrenalina con tus amigos.
+        <br />
+        DOMINGO A DOMINGO DE 8 AM - 11 PM
+      </h3>
+    </section>
+
+    <section class="md:flex md:flex-row-reverse md:px-10 md:gap-5 lg:px-24 lg:gap-10 items-center">
+      <img
+        src="/images/Canchas/canchasMain.webp"
+        alt="Nuestras canchas"
+        width="800"
+        height="600"
+        loading="lazy"
+        class="w-full h-[200px] object-cover object-center mb-10 md:h-[353px] md:max-w-[580px] md:rounded-xl md:shadow-[0_4px_10px_3px_rgba(0,0,0,0.3)]"
+      />
+      <div class="px-8 md:px-0">
+        <h3 class="font-title md:text-2xl mb-1">Nuestras canchas</h3>
+        <p class="text-sm mb-5 text-[#828292] md:text-sm lg:text-base md:mb-10">
+          Cancha profesional de césped sintético de última generación,
+          perfecta para partidos competitivos y entrenamientos de cualquier
+          nivel. Equipamiento completo y mantenimiento diario.
+        </p>
+        <h3 class="font-title md:text-2xl mb-1">Caracteristicas incluidas:</h3>
+        <ul class="text-sm list-disc pl-5 text-[#828292] md:text-sm lg:text-base">
+          <li>Totalmente cerradas con malla</li>
+          <li>Iluminación profesional</li>
+          <li>Zona de graderías</li>
+          <li>Medidas reglamentarias</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <Title
+        titulo="Precios"
+        subTitulo="Tarifas por Horario"
+        descripcion="Nuestras canchas tienen el mismo equipamiento y calidad siempre. El precio varía únicamente según el horario de tu reserva. ¡Aprovecha los horarios!"
+      />
+    </section>
+
+    <section class="flex flex-wrap md:flex-row px-8 gap-10 justify-center lg:gap-20 pb-20">
+      <div class="p-5 shadow-[0_4px_10px_3px_rgba(0,0,0,0.15)] rounded-xl text-xs md:text-base bg-white border border-black/5 md:min-w-[500px]">
+        <h4 class="font-semibold">Lunes a viernes</h4>
+        <p class="text-[#828292] mb-5">Precio según el horario</p>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
+            <div class="flex items-center md:gap-2">
+              <Icon name="mdi:clock-outline" class="w-[20px] h-[20px]" />
+              8:00 AM - 4:00 PM
+            </div>
+            <p>$70.000 <span class="font-normal">cop</span></p>
+          </div>
+          <div class="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
+            <div class="flex items-center md:gap-2">
+              <Icon name="mdi:clock-outline" class="w-[20px] h-[20px]" />
+              4:00 PM – 6:00 PM
+            </div>
+            <p>$80.000 <span class="font-normal">cop</span></p>
+          </div>
+          <div class="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
+            <div class="flex items-center md:gap-2">
+              <Icon name="mdi:clock-outline" class="w-[20px] h-[20px]" />
+              6:00 PM – 7:00 PM
+            </div>
+            <p>$90.000 <span class="font-normal">cop</span></p>
+          </div>
+          <div class="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold">
+            <div class="flex items-center md:gap-2">
+              <Icon name="mdi:clock-outline" class="w-[20px] h-[20px]" />
+              7:00 PM – 9:00 PM
+            </div>
+            <p>$105.000 <span class="font-normal">cop</span></p>
+          </div>
+          <div class="flex items-center justify-between h-[58px] bg-[#F8F8F8] px-5 rounded-xl font-semibold mb-10">
+            <div class="flex items-center md:gap-2">
+              <Icon name="mdi:clock-outline" class="w-[20px] h-[20px]" />
+              9:00 PM – 10:00 PM
+            </div>
+            <p>$90.000 <span class="font-normal">cop</span></p>
+          </div>
+          <a
+            href={reservaSemanaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full rounded-xl bg-black text-center text-white py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:opacity-90 active:translate-y-[1px] transition"
+          >
+            Reserva aquí
+          </a>
+        </div>
+      </div>
+
+      <div class="p-5 shadow-[0_4px_10px_3px_rgba(0,0,0,0.15)] rounded-xl text-xs md:text-base bg-white border border-black/5 md:min-w-[500px] flex flex-col justify-between">
+        <div>
+          <div class="flex items-start justify-between gap-4 mb-5 sm:mb-6">
+            <div class="min-w-0">
+              <h4 class="font-semibold text-gray-900 leading-tight">
+                Sábados, Domingos y Festivos
+              </h4>
+              <p class="text-gray-500 text-sm">Disponible todo el día</p>
+            </div>
+
+            <span class="shrink-0 rounded-xl bg-[#E9EBEF] text-gray-800 text-xs sm:text-sm px-3 py-1.5">
+              Tarifa fija
+            </span>
+          </div>
+
+          <div class="rounded-2xl bg-[#F5F6F8] px-5 py-6 sm:px-6 sm:py-7 mb-5 sm:mb-6">
+            <div class="text-center">
+              <div class="font-extrabold text-3xl sm:text-4xl text-gray-900 tracking-tight">
+                $85.000 <span class="font-bold">cop</span>
+              </div>
+              <div class="text-gray-500 text-sm sm:text-base mt-1">por hora</div>
+
+              <div class="mt-3 inline-flex items-center gap-2 text-gray-500 text-sm sm:text-base">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+                <span>Cualquier horario disponible</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-gray-600 text-sm sm:text-base mb-5 sm:mb-6">
+            <li class="flex gap-2">
+              <span class="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
+              <span>Ideal para partidos de fin de semana</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
+              <span>Disponibilidad desde las 8:00 AM</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 h-1.5 w-1.5 rounded-full bg-gray-400"></span>
+              <span>Reserva anticipada recomendada</span>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href={reservaFinSemanaUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full rounded-xl bg-black text-center text-white py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:opacity-90 active:translate-y-[1px] transition"
+        >
+          Reserva aquí
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
