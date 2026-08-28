@@ -1,6 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Title from "@/components/Title.astro";
 import { Icon } from "astro-icon/components";
 
 const reservaSemanaUrl =
@@ -29,63 +28,87 @@ const reservaFinSemanaUrl =
     ],
   }}
 >
-  <main class="bg-white font-text">
-    <section>
+  <main class="bg-[#f7f7fa] font-text">
+    <section class="relative flex min-h-[520px] items-end overflow-hidden">
       <img
         src="/images/Canchas/canchasHeader.webp"
         alt="Canchas header"
         width="1600"
         height="900"
         fetchpriority="high"
-        class="w-full h-[300px] object-cover object-[center_70%] mb-10 md:h-[400px]"
+        class="absolute inset-0 h-full w-full object-cover object-[center_70%]"
       />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/62 via-black/30 to-transparent"></div>
+      <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f7f7fa] to-transparent"></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-12 pt-32 text-white md:px-8">
+        <span class="mb-4 inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] backdrop-blur">
+          Domingo a domingo - 8 AM a 11 PM
+        </span>
+        <h1 class="font-title text-4xl leading-tight md:text-6xl">
+          Canchas Sinteticas
+        </h1>
+        <p class="mt-4 max-w-[640px] text-sm font-semibold leading-7 text-white/90 md:text-base">
+          Canchas de césped sintético para partidos con amigos, entrenamientos
+          y torneos. Reserva por horario y llega listo para jugar.
+        </p>
+      </div>
     </section>
 
-    <section class="flex flex-col justify-center items-center gap-2 mb-10 px-6">
-      <h2 class="font-title text-3xl text-center">Canchas Sinteticas</h2>
-      <h3 class="text-center text-[#828292] text-sm font-[600]">
-        Es hora de vivir la adrenalina con tus amigos.
-        <br />
-        DOMINGO A DOMINGO DE 8 AM - 11 PM
-      </h3>
-    </section>
-
-    <section class="md:flex md:flex-row-reverse md:px-10 md:gap-5 lg:px-24 lg:gap-10 items-center">
+    <section class="px-5 py-12 md:px-8 md:py-14">
+      <div class="mx-auto grid max-w-[1120px] gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
       <img
         src="/images/Canchas/canchasMain.webp"
         alt="Nuestras canchas"
         width="800"
         height="600"
         loading="lazy"
-        class="w-full h-[200px] object-cover object-center mb-10 md:h-[353px] md:max-w-[580px] md:rounded-xl md:shadow-[0_4px_10px_3px_rgba(0,0,0,0.3)]"
+        class="h-[260px] w-full rounded-xl object-cover object-center shadow-[0_18px_50px_rgba(18,18,28,0.12)] md:h-[420px]"
       />
-      <div class="px-8 md:px-0">
-        <h3 class="font-title md:text-2xl mb-1">Nuestras canchas</h3>
-        <p class="text-sm mb-5 text-[#828292] md:text-sm lg:text-base md:mb-10">
+      <div>
+        <span class="mb-3 inline-flex rounded-full bg-white px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#713478] shadow-sm">
+          Instalaciones
+        </span>
+        <h2 class="mb-4 font-title text-3xl text-[#20202a] md:text-4xl">Nuestras canchas</h2>
+        <p class="mb-6 text-sm leading-7 text-[#626271] md:text-base">
           Cancha profesional de césped sintético de última generación,
           perfecta para partidos competitivos y entrenamientos de cualquier
           nivel. Equipamiento completo y mantenimiento diario.
         </p>
-        <h3 class="font-title md:text-2xl mb-1">Caracteristicas incluidas:</h3>
-        <ul class="text-sm list-disc pl-5 text-[#828292] md:text-sm lg:text-base">
-          <li>Totalmente cerradas con malla</li>
-          <li>Iluminación profesional</li>
-          <li>Zona de graderías</li>
-          <li>Medidas reglamentarias</li>
+        <ul class="grid gap-3 text-sm text-[#626271] sm:grid-cols-2">
+          <li class="flex items-center gap-2 rounded-lg bg-white px-4 py-3 shadow-sm ring-1 ring-black/5">
+            <Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />
+            Totalmente cerradas con malla
+          </li>
+          <li class="flex items-center gap-2 rounded-lg bg-white px-4 py-3 shadow-sm ring-1 ring-black/5">
+            <Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />
+            Iluminación profesional
+          </li>
+          <li class="flex items-center gap-2 rounded-lg bg-white px-4 py-3 shadow-sm ring-1 ring-black/5">
+            <Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />
+            Zona de graderías
+          </li>
+          <li class="flex items-center gap-2 rounded-lg bg-white px-4 py-3 shadow-sm ring-1 ring-black/5">
+            <Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />
+            Medidas reglamentarias
+          </li>
         </ul>
+      </div>
       </div>
     </section>
 
-    <section>
-      <Title
-        titulo="Precios"
-        subTitulo="Tarifas por Horario"
-        descripcion="Nuestras canchas tienen el mismo equipamiento y calidad siempre. El precio varía únicamente según el horario de tu reserva. ¡Aprovecha los horarios!"
-      />
-    </section>
+    <section class="px-5 pb-20 md:px-8 md:pb-24">
+      <div class="mx-auto mb-8 max-w-[1120px]">
+        <span class="mb-3 inline-flex rounded-full bg-white px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#713478] shadow-sm">
+          Precios
+        </span>
+        <h2 class="text-2xl font-bold text-[#31313c]">Tarifas por horario</h2>
+        <p class="mt-2 max-w-[720px] text-sm leading-6 text-[#6f6f7d]">
+          El precio varía únicamente según el horario de tu reserva.
+        </p>
+      </div>
 
-    <section class="flex flex-wrap md:flex-row px-8 gap-10 justify-center lg:gap-20 pb-20">
-      <div class="p-5 shadow-[0_4px_10px_3px_rgba(0,0,0,0.15)] rounded-xl text-xs md:text-base bg-white border border-black/5 md:min-w-[500px]">
+      <div class="mx-auto grid max-w-[1120px] gap-8 border-t border-black/10 pt-8 lg:grid-cols-2">
+      <div class="text-xs md:text-base">
         <h4 class="font-semibold">Lunes a viernes</h4>
         <p class="text-[#828292] mb-5">Precio según el horario</p>
 
@@ -129,14 +152,14 @@ const reservaFinSemanaUrl =
             href={reservaSemanaUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="block w-full rounded-xl bg-black text-center text-white py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:opacity-90 active:translate-y-[1px] transition"
+            class="block w-full rounded-lg bg-gradient-to-br from-[#713478] to-[#b76cbf] text-center text-white py-3 sm:py-3.5 text-sm sm:text-base font-bold shadow-[0_8px_18px_rgba(113,52,120,0.24)] hover:brightness-110 active:translate-y-[1px] transition"
           >
             Reserva aquí
           </a>
         </div>
       </div>
 
-      <div class="p-5 shadow-[0_4px_10px_3px_rgba(0,0,0,0.15)] rounded-xl text-xs md:text-base bg-white border border-black/5 md:min-w-[500px] flex flex-col justify-between">
+      <div class="flex flex-col justify-between border-t border-black/10 pt-6 text-xs md:text-base lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
         <div>
           <div class="flex items-start justify-between gap-4 mb-5 sm:mb-6">
             <div class="min-w-0">
@@ -151,7 +174,7 @@ const reservaFinSemanaUrl =
             </span>
           </div>
 
-          <div class="rounded-2xl bg-[#F5F6F8] px-5 py-6 sm:px-6 sm:py-7 mb-5 sm:mb-6">
+          <div class="mb-5 border-y border-black/10 py-6 sm:mb-6 sm:py-7">
             <div class="text-center">
               <div class="font-extrabold text-3xl sm:text-4xl text-gray-900 tracking-tight">
                 $85.000 <span class="font-bold">cop</span>
@@ -188,10 +211,11 @@ const reservaFinSemanaUrl =
           href={reservaFinSemanaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full rounded-xl bg-black text-center text-white py-3 sm:py-3.5 text-sm sm:text-base font-semibold hover:opacity-90 active:translate-y-[1px] transition"
+          class="block w-full rounded-lg bg-gradient-to-br from-[#713478] to-[#b76cbf] text-center text-white py-3 sm:py-3.5 text-sm sm:text-base font-bold shadow-[0_8px_18px_rgba(113,52,120,0.24)] hover:brightness-110 active:translate-y-[1px] transition"
         >
           Reserva aquí
         </a>
+      </div>
       </div>
     </section>
   </main>

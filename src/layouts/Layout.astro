@@ -85,12 +85,21 @@ const canonicalUrl = new URL(canonical, Astro.site ?? "https://playzonevip.com")
     <meta name="author" content="PlayZone VIP" />
     <link rel="canonical" href={canonicalUrl} />
 
+    <link rel="preload" href="/fonts/Sprintura Demo.otf" as="font" type="font/otf" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      />
+    </noscript>
 
     <meta property="og:type" content={og.type} />
     <meta property="og:locale" content={og.locale} />

@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Title from "@/components/Title.astro";
 import PriceCard from "@/components/PriceCard.astro";
+import { Icon } from "astro-icon/components";
 
 const reservaUrl =
   "https://wa.me/573132485526?text=" +
@@ -21,72 +21,80 @@ const reservaUrl =
     images: [{ url: "/og-paintball.webp", width: 1200, height: 630, alt: "Paintball en Playzone VIP" }],
   }}
 >
-  <main class="bg-white font-text">
-    <section>
+  <main class="bg-[#f7f7fa] font-text">
+    <section class="relative flex min-h-[520px] items-end overflow-hidden">
       <img
         src="/images/Paintball/paintballHeader.webp"
         alt="Paintball header"
         width="1600"
         height="900"
         fetchpriority="high"
-        class="w-full h-[300px] object-cover object-center mb-10 md:h-[400px]"
+        class="absolute inset-0 h-full w-full object-cover object-center"
       />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/62 via-black/30 to-transparent"></div>
+      <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f7f7fa] to-transparent"></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1120px] px-5 pb-12 pt-32 text-white md:px-8">
+        <span class="mb-4 inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] backdrop-blur">
+          Domingo a domingo - 8 AM a 11 PM
+        </span>
+        <h1 class="font-title text-4xl leading-tight md:text-6xl">Paintball</h1>
+        <p class="mt-4 max-w-[680px] text-sm font-semibold leading-7 text-white/90 md:text-base">
+          Estrategia, trabajo en equipo y acción en escenarios diseñados para
+          jugar con seguridad y adrenalina.
+        </p>
+      </div>
     </section>
 
-    <section class="flex flex-col justify-center items-center gap-2 mb-10 px-6">
-      <h2 class="font-title text-3xl text-center">Paintball</h2>
-      <h3 class="text-center text-[#828292] text-sm font-[600]">
-        Vive la emoción del paintball en nuestros campos. Estrategia, trabajo
-        en equipo y mucha diversión en una experiencia segura y profesional.
-        <br />
-        DOMINGO A DOMINGO DE 8 AM - 11 PM
-      </h3>
-    </section>
-
-    <section class="px-5 md:px-10 lg:px-24 mb-12 flex flex-col items-center">
-      <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:items-center">
+    <section class="px-5 py-12 md:px-8 md:py-14">
+      <div class="mx-auto grid max-w-[1120px] grid-cols-1 gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-center">
         <div>
           <div class="max-w-2xl mb-6">
-            <h3 class="font-title text-xl md:text-2xl text-gray-900 mb-2 text-center md:text-start">
+            <span class="mb-3 inline-flex rounded-full bg-white px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#713478] shadow-sm">
+              Paquete base
+            </span>
+            <h2 class="font-title text-3xl text-[#20202a] md:text-4xl">
               Experiencia Completa de Paintball
-            </h3>
-            <p class="text-gray-600 text-sm md:text-base text-center md:text-start">
+            </h2>
+            <p class="mt-4 text-sm leading-7 text-[#626271] md:text-base">
               Nuestro paquete base incluye todo lo necesario para que
               disfrutes una hora de acción intensa. Sin costos ocultos, todo
               el equipamiento profesional está incluido en el precio.
             </p>
           </div>
-          <div class="rounded-2xl bg-[#F1F3F5] border border-black/5 shadow-[0_10px_30px_rgba(0,0,0,0.06)] p-6 flex flex-col items-center text-center">
-            <div class="mb-4">
-              <h4 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
-                $30.000 <span class="font-bold">cop</span>
-              </h4>
-              <p class="text-gray-500 text-sm mt-1">por persona</p>
+          <div class="border-t border-black/10 pt-6">
+            <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 class="text-3xl font-extrabold text-[#713478] md:text-4xl">
+                  $30.000 <span class="text-xl">cop</span>
+                </h3>
+                <p class="text-sm text-[#6f6f7d]">por persona</p>
+              </div>
+              <span class="inline-flex w-fit items-center gap-2 rounded-full bg-[#f2eef4] px-4 py-2 text-sm font-bold text-[#31313c]">
+                <Icon name="mdi:clock-outline" class="h-5 w-5 text-[#713478]" />
+                1 hora de juego
+              </span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+            <div class="mb-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
-                <p class="text-gray-900 font-semibold text-sm mb-2 text-start">
+                <p class="mb-2 text-sm font-bold text-[#31313c]">
                   Equipamiento incluido:
                 </p>
-                <ul class="text-gray-700 text-sm space-y-1 text-start">
-                  <li>• Overol profesional</li>
-                  <li>• Chaleco protector</li>
-                  <li>• Marcadora semiautomática</li>
-                  <li>• Máscara de seguridad</li>
-                  <li>• 100 bolas de pintura</li>
+                <ul class="space-y-2 text-sm text-[#626271]">
+                  <li class="flex gap-2"><Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />Overol profesional</li>
+                  <li class="flex gap-2"><Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />Chaleco protector</li>
+                  <li class="flex gap-2"><Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />Marcadora semiautomática</li>
                 </ul>
               </div>
-              <div class="sm:self-start flex justify-center sm:justify-start">
-                <div class="inline-flex items-center gap-2 rounded-lg px-3 py-2">
-                  <svg viewBox="0 0 24 24" class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="1.8">
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path d="M12 7v5l3 2"></path>
-                  </svg>
-                  <span class="text-sm text-gray-800 font-medium">
-                    1 hora de juego
-                  </span>
-                </div>
+              <div>
+                <p class="mb-2 text-sm font-bold text-[#31313c]">
+                  También incluye:
+                </p>
+                <ul class="space-y-2 text-sm text-[#626271]">
+                  <li class="flex gap-2"><Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />Máscara de seguridad</li>
+                  <li class="flex gap-2"><Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />100 bolas de pintura</li>
+                  <li class="flex gap-2"><Icon name="mdi:check-circle-outline" class="h-5 w-5 text-[#713478]" />Campo y acompañamiento</li>
+                </ul>
               </div>
             </div>
 
@@ -94,36 +102,39 @@ const reservaUrl =
               href={reservaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="block w-full rounded-xl bg-black text-white text-center py-3 text-sm sm:text-base font-semibold hover:opacity-90 active:translate-y-[1px] transition"
+              class="block w-full rounded-lg bg-gradient-to-br from-[#713478] to-[#b76cbf] py-3 text-center text-sm font-bold text-white shadow-[0_8px_18px_rgba(113,52,120,0.24)] transition hover:brightness-110 active:translate-y-[1px] sm:text-base"
             >
               Reserva aquí
             </a>
           </div>
         </div>
 
-        <div class="rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+        <div class="overflow-hidden rounded-xl">
           <img
             src="/images/Paintball/paintballExperience.webp"
             alt="Experiencia de paintball en Playzone VIP"
             width="1200"
             height="800"
             loading="lazy"
-            class="w-full h-[220px] object-cover sm:h-[280px] md:h-[320px]"
+            class="h-[260px] w-full object-cover sm:h-[340px] md:h-[430px]"
           />
         </div>
       </div>
     </section>
 
-    <section>
-      <Title
-        titulo="Zona de Recargas"
-        subTitulo="Adición de Bolas"
-        descripcion="Recarga tu juego y continúa la diversión. En esta zona podrás añadir más bolas a tu partida de paintball y disfrutar sin interrupciones."
-      />
+    <section class="px-5 pb-5 md:px-8">
+      <div class="mx-auto max-w-[1120px]">
+        <span class="mb-3 inline-flex rounded-full bg-white px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#713478] shadow-sm">
+          Zona de Recargas
+        </span>
+        <h2 class="text-2xl font-bold text-[#31313c]">Adición de bolas</h2>
+        <p class="mt-2 max-w-[720px] text-sm leading-6 text-[#6f6f7d]">
+          Recarga tu juego y continúa la diversión sin interrupciones.
+        </p>
+      </div>
     </section>
-
     <section
-      class="scroll-hide bg-white flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth px-5 pb-5 justify-start md:justify-center lg:overflow-x-visible"
+      class="scroll-hide flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth px-5 pb-20 md:px-8 md:pb-24 justify-start md:justify-center lg:overflow-x-visible"
     >
       <div class="snap-center shrink-0">
         <PriceCard

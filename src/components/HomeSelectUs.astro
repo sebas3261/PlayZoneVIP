@@ -10,9 +10,9 @@ interface Props {
 const { icon, title, description } = Astro.props;
 ---
 
-<div class="w-[300px] h-[260px] bg-white rounded-3xl shadow-lg flex flex-col items-center text-center p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)] hover:bg-gradient-to-b hover:from-gray-50 hover:to-white mb-5">
-  <div class="w-[90px] h-[90px] flex justify-center items-center rounded-full bg-gradient-to-br from-[#003566] to-[#0077b6] shadow-md mb-4">
-    <Icon name={icon} class="w-[55px] h-[55px] text-white" />
+<div class="w-[300px] h-[248px] bg-white rounded-xl ring-1 ring-black/5 shadow-[0_14px_38px_rgba(18,18,28,0.10)] flex flex-col items-center text-center p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_48px_rgba(18,18,28,0.14)] mb-5">
+  <div class="w-[76px] h-[76px] flex justify-center items-center rounded-full bg-gradient-to-br from-[#003566] to-[#713478] shadow-[0_12px_28px_rgba(0,53,102,0.24)] mb-4">
+    <Icon name={icon} class="w-[42px] h-[42px] text-white" />
   </div>
 
   <h4 class="text-lg font-semibold mb-2 text-gray-800 tracking-tight">

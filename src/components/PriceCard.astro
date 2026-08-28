@@ -13,13 +13,11 @@ const { icon, title, total, perPerson, ctaHref } = Astro.props;
 ---
 
 <div
-  class="w-[204px] h-[246px] bg-white rounded-[20px]
-         border border-black/5 shadow-[0_6px_16px_rgba(0,0,0,0.1)]
-         flex flex-col justify-between p-4 text-center"
+  class="flex h-[210px] w-[190px] flex-col justify-between border-l border-black/10 px-4 py-2 text-center first:border-l-0"
 >
   <div class="flex flex-col items-center">
-    <div class="w-[48px] h-[48px] rounded-full bg-[#ECEDEF] flex items-center justify-center mb-2">
-      <Icon name={icon} class="w-6 h-6 text-gray-700" />
+    <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-black/5">
+      <Icon name={icon} class="h-6 w-6 text-[#713478]" />
     </div>
 
     <h4 class="text-[14px] font-semibold text-gray-900 mb-1">
@@ -34,11 +32,11 @@ const { icon, title, total, perPerson, ctaHref } = Astro.props;
     href={ctaHref}
     target="_blank"
     rel="noopener noreferrer"
-    class="w-full flex items-center justify-center gap-2 py-3
-           text-white rounded-xl text-[13px] font-semibold
-           bg-black
-           shadow-[0_4px_10px_rgba(0,0,0,0.3)]
-           hover:shadow-[0_6px_15px_rgba(0,0,0,0.4)]
+    class="w-full flex items-center justify-center gap-2 rounded-lg py-3
+           text-white text-[13px] font-bold
+           bg-gradient-to-br from-[#713478] to-[#b76cbf]
+           shadow-[0_8px_18px_rgba(113,52,120,0.24)]
+           hover:brightness-110
            active:translate-y-[1px]
            transition-all duration-300
            focus:outline-none focus:ring-2 focus:ring-[#b76cbf]/60"
