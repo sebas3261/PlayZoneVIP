@@ -144,37 +144,24 @@ const waUrl = `https://wa.me/573132485526?text=${encodeURIComponent(
 
     <section class="bg-[#f7f7fa] border-y border-black/5">
       <Title
-        titulo="Por que elegirnos"
+        titulo="Por qué elegirnos"
         subTitulo="La mejor experiencia deportiva"
         descripcion="En PlayZone VIP nos dedicamos a ofrecer instalaciones de primera calidad y un servicio excepcional para que disfrutes al máximo de tu tiempo deportivo y de ocio."
       />
     </section>
 
     <section class="bg-[#f7f7fa] pb-14">
-      <div
-        class="hidden md:block md:overflow-x-auto md:px-6 md:scroll-smooth md:snap-x md:snap-mandatory md:[scrollbar-width:none] md:[&::-webkit-scrollbar]:hidden"
-      >
-        <div class="flex gap-5 py-2 w-max mx-auto snap-x snap-mandatory">
-          {items.map((item) => (
-            <div class="snap-center flex-shrink-0">
-              <HomeSelectUs icon={item.icon} title={item.title} description={item.description} />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div id="mobile-features" class="block md:hidden relative h-[280px] flex justify-center items-center">
+      <div class="scroll-hide overflow-x-auto px-5 scroll-smooth snap-x snap-mandatory md:px-6">
+        <div class="mx-auto flex w-max gap-5 py-2 snap-x snap-mandatory">
         {items.map((item, i) => (
           <div
-            class:list={[
-              "feature-slide absolute transition-all duration-700 ease-in-out",
-              i === 0 ? "opacity-100 scale-100" : "opacity-0 scale-90",
-            ]}
+            class="snap-center flex-shrink-0"
             data-index={i}
           >
             <HomeSelectUs icon={item.icon} title={item.title} description={item.description} />
           </div>
         ))}
+        </div>
       </div>
     </section>
 
@@ -266,7 +253,7 @@ const waUrl = `https://wa.me/573132485526?text=${encodeURIComponent(
               href="/contacto"
             >
               <Icon name="mdi:information-outline" class="h-5 w-5" />
-              Mas informacion
+              Más información
             </a>
           </div>
         </div>
@@ -279,11 +266,11 @@ const waUrl = `https://wa.me/573132485526?text=${encodeURIComponent(
           <li class="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3">
             <Icon name="mdi:location" class="h-5 w-5 shrink-0" aria-hidden="true" />
             <a
-              href="https://maps.google.com/?q=PlayZone+VIP+Ch%C3%ADa+Cra+9+Vereda+Bojac%C3%A1"
+              href="https://maps.google.com/?q=PlayZone+VIP+Ch%C3%ADa+Crr+9n+Vereda+Bojac%C3%A1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Cra. 9 Vereda Bojacá / Km 1 vía Chía-Cajicá
+              Crr. 9n, Vereda Bojacá / Km 1 vía Chía-Cajicá
             </a>
           </li>
           <li class="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3">
@@ -295,24 +282,3 @@ const waUrl = `https://wa.me/573132485526?text=${encodeURIComponent(
     </section>
   </main>
 </Layout>
-
-<script>
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const slides = reduceMotion
-    ? []
-    : document.querySelectorAll<HTMLElement>("#mobile-features .feature-slide");
-
-  if (slides.length > 0) {
-    let index = 0;
-    setInterval(() => {
-      index = (index + 1) % slides.length;
-      slides.forEach((el, i) => {
-        const active = i === index;
-        el.classList.toggle("opacity-100", active);
-        el.classList.toggle("scale-100", active);
-        el.classList.toggle("opacity-0", !active);
-        el.classList.toggle("scale-90", !active);
-      });
-    }, 3000);
-  }
-</script>
